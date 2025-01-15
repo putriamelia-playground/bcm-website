@@ -13,7 +13,8 @@
               <x-nav-link href="/agenda" :active="request()->is('agenda')">Agenda</x-nav-link>
               <x-nav-link href="/about-us" :active="request()->is('about-us')">Tentang Kami</x-nav-link>
               <x-nav-link href="/layanan" :active="request()->is('layanan')">Layanan</x-nav-link>
-              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">K3 Product</a>
+              <x-nav-link href="/k3-product" :active="request()->is('k3-product')">K3 Product</x-nav-link>
+              <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">K3 Product</a> -->
             </div>
           </div>
         </div>
