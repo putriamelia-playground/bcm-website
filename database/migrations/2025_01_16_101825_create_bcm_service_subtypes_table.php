@@ -10,13 +10,10 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('bcm_articles', function (Blueprint $table) {
+        Schema::create('bcm_service_subtypes', function (Blueprint $table) {
             $table->id();
-            $table->string('article_slug')->unique();
-            $table->string('article_title')->nullable();
-            $table->date('article_date')->nullable();
-            $table->string('article_desc')->nullable();
-            $table->string('article_image')->nullable();
+            $table->foreignId('bcm_service_type_id')->constrained();
+            $table->string('service_subtype_name')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
@@ -27,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('bcm_articles');
+        Schema::dropIfExists('bcm_service_subtypes');
     }
 };

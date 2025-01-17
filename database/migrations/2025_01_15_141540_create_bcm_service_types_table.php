@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('bcm_service_types', function (Blueprint $table) {
             $table->id();
-            $table->string('service_name')->unique();
+            $table->string('service_name')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();
         });

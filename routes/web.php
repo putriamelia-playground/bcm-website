@@ -12,9 +12,15 @@ Route::get('/artikel', [ArticleController::class, 'getArticleData']);
 
 Route::get('/detailartikel/{slug}', [ArticleController::class, 'getArtikelDetail']);
 
-Route::get('/agenda', [AgendaController::class, 'getAgendaData']);
+// Route::get('/agenda', [AgendaController::class, 'getAgendaData']);
 
 Route::get('/detailagenda/{slug}', [AgendaController::class, 'getAgendaDetail']);
+
+Route::get('/formuliragenda/{slug}', [AgendaController::class, 'getAgendaFormulirDetail']);
+
+Route::get('/detailtag/{id}', [AgendaController::class, 'getDetailTag']);
+
+Route::resource('agenda', AgendaController::class);
 
 Route::get('/about-us', function () {
     return view('aboutus', ['title' => 'About Us Page']);
