@@ -12,9 +12,10 @@ return new class extends Migration {
     {
         Schema::create('bcm_agendas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bcm_service_type_id')->constrained();
-            $table->string('agenda_name')->unique();
+            $table->string('agenda_name')->nullable();
+            $table->string('agenda_slug')->unique();
             $table->date('agenda_date')->nullable();
+            $table->string('agenda_time')->nullable();
             $table->string('agenda_desc')->nullable();
             $table->string('agenda_pamphlet')->nullable();
             $table->integer('sort_order')->nullable();
