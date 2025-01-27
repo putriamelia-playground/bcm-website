@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class PivotType extends Model
 {
-    protected $table = 'bcm_pivot_types';
+    protected $table = 'bcm_agenda_subtype';
 }

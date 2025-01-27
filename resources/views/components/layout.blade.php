@@ -20,6 +20,12 @@
             <div>
                 {{ $slot }}
             </div>
+            <div class="fixed bottom-6 right-6">
+                <a href="<?= env('CS') ?>" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white font-medium rounded-md px-4 py-2 flex items-center justify-center hover:bg-yellow-600 transition duration-300 ease-in-out shadow-lg">
+                    <span class="text-lg mr-2">📞</span>
+                    Need Help ?
+                </a>
+            </div>
         </main>
     </div>
 

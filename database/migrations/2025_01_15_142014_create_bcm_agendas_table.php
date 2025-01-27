@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('agenda_slug')->unique();
             $table->date('agenda_date')->nullable();
             $table->string('agenda_time')->nullable();
-            $table->string('agenda_desc')->nullable();
+            $table->text('agenda_desc')->nullable();
             $table->string('agenda_pamphlet')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();

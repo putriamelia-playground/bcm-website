@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\ServiceSubType;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -10,21 +11,29 @@ class ArticleController extends Controller
     public function getArticleData()
     {
         $article = Article::all();
-        $title = 'Artikel Page';
+        $title = 'Article Page';
 
-        return view('artikel', compact(
+        return view('article', compact(
             'article', 'title'
         ));
     }
 
-    public function getArtikelDetail($slug)
+    public function getArticleDetail($slug)
     {
         $data = Article::where('article_slug', $slug)->first();
         $slug = $data->article_slug;
-        $title = 'Detail Artikel Page';
+        $title = 'Detail Article Page';
 
-        return view('detailartikel', compact(
+        return view('detailarticle', compact(
             'slug', 'title', 'data'
         ));
+    }
+
+    public function getDetailTag($slug)
+    {
+        $data = ServiceSubType::where('service_subtype_slug', $slug)->first();
+        $title = 'Detail Tag Article Page';
+
+        return view('detailarticletag', compact('title', 'data'));
     }
 }

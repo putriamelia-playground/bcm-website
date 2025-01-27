@@ -10,8 +10,8 @@ class Agenda extends Model
 {
     protected $table = 'bcm_agendas';
 
-    public function tags(): BelongsToMany
+    public function agendatags(): BelongsToMany
     {
-        return $this->belongsToMany(Tag::class, 'bcm_pivot_types', 'bcm_agenda_id', 'bcm_service_subtype_id');
+        return $this->belongsToMany(Tag::class, 'bcm_agenda_subtype', 'bcm_agenda_id', 'bcm_service_subtype_id');
     }
 }

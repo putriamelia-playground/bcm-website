@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SubmitMail;
 use App\Models\Agenda;
 use App\Models\Form;
+use App\Models\ServiceSubType;
 use Illuminate\Http\Request;
+use Mail;
 
 class AgendaController extends Controller
 {
     public function index()  // show data
     {
         $agenda = Agenda::all();
-        $dataPivot = Agenda::with('tags')->get();
         $title = 'Agenda Page';
 
         return view('agenda', compact(
-            'agenda', 'title', 'dataPivot'
+            'agenda', 'title'
         ));
     }
 
@@ -23,16 +25,19 @@ class AgendaController extends Controller
     {
         $data = Agenda::where('agenda_slug', $slug)->first();
         $slug = $data->agenda_slug;
-        $title = 'Detail Artikel Page';
+        $title = 'Detail Agenda Page';
 
         return view('detailagenda', compact(
             'title', 'data', 'slug'
         ));
     }
 
-    public function getDetailTag()
+    public function getDetailTag($slug)
     {
-        return view('detailtag');
+        $data = ServiceSubType::where('service_subtype_slug', $slug)->first();
+        $title = 'Detail Tag Agenda Page';
+
+        return view('detailagendatag', compact('title', 'data'));
     }
 
     public function getAgendaFormulirDetail($slug)
@@ -42,7 +47,7 @@ class AgendaController extends Controller
         return view('formuliragenda', compact('title', 'data'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request)  // store formulir agenda
     {
         $request->validate(
             [
@@ -81,8 +86,15 @@ class AgendaController extends Controller
         $agendaform->email_agreement = $request->input('email_agreement', 0);
         $agendaform->save();
 
+        $mailData = [
+            'title' => 'This is Testing Email.',
+            'body' => 'This is for testing email using smtp.'
+        ];
+
+        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($mailData));
+
         return redirect()
             ->route('agenda.index')
-            ->with('message', 'Formulir Berhasil di Simpan');  // TODO
+            ->with('success', 'Formulir Berhasil di Simpan');
     }
 }

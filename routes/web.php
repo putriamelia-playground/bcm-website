@@ -2,15 +2,16 @@
 
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\InputArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home Page']);
 });
 
-Route::get('/artikel', [ArticleController::class, 'getArticleData']);
+Route::get('/article', [ArticleController::class, 'getArticleData']);
 
-Route::get('/detailartikel/{slug}', [ArticleController::class, 'getArtikelDetail']);
+Route::get('/detailarticle/{slug}', [ArticleController::class, 'getArticleDetail']);
 
 // Route::get('/agenda', [AgendaController::class, 'getAgendaData']);
 
@@ -18,7 +19,9 @@ Route::get('/detailagenda/{slug}', [AgendaController::class, 'getAgendaDetail'])
 
 Route::get('/formuliragenda/{slug}', [AgendaController::class, 'getAgendaFormulirDetail']);
 
-Route::get('/detailtag/{id}', [AgendaController::class, 'getDetailTag']);
+Route::get('/detailagendatag/{slug}', [AgendaController::class, 'getDetailTag']);
+
+Route::get('/detailarticletag/{slug}', [ArticleController::class, 'getDetailTag']);
 
 Route::resource('agenda', AgendaController::class);
 
@@ -33,3 +36,13 @@ Route::get('/layanan', function () {
 Route::get('/k3-product', function () {
     return view('k3product', ['title' => 'K3 Product Page']);
 });
+
+// Route::get('/admin', function () {
+//     return view('admin\adminlogin', ['title' => 'ini khusus admin']);
+// });
+
+Route::get('/admin', function () {
+    return view('admin\admindashboard', ['title' => 'Dashboard Admin']);
+});
+
+Route::resource('inputarticle', InputArticleController::class);
