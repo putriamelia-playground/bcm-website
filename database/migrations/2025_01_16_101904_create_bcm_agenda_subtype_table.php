@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('bcm_pivot_types', function (Blueprint $table) {
+        Schema::create('bcm_agenda_subtype', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('bcm_agenda_id');
             $table->unsignedBigInteger('bcm_service_subtype_id');
@@ -25,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('bcm_pivot_types');
+        Schema::dropIfExists('bcm_agenda_subtype');
     }
 };

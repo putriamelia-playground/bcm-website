@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('article_slug')->unique();
             $table->string('article_title')->nullable();
             $table->date('article_date')->nullable();
-            $table->string('article_desc')->nullable();
+            $table->text('article_desc')->nullable();
             $table->string('article_image')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();

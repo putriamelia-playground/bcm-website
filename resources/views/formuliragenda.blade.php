@@ -1,124 +1,109 @@
 <x-layout>
     <x-slot:title>{{$title}}</x-slot:title>
 
-    <div class="mx-auto max-w-xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
-        <div class="flex flex-row bg-white rounded-lg p-4 justify-between">
-
-            <form action="{{ route('agenda.store') }}" method="POST">
-                @csrf
-                {{-- @method('PUT') --}}
-                <div class="space-y-12">
-                    <h2 class="text-2xl font-semibold text-gray-900 text-center">{{ $data->agenda_name }}</h2>
-
-                    <table class="w-full text-sm text-left rtl:text-right text-gray-900 dark:text-gray-400">
-                        <tr>
-                            <th>Hari/Tanggal</th>
-                            <td>: {{ date('d F Y', strtotime($data->agenda_date))}}</td>
-                        </tr>
-                        <tr>
-                            <th>Waktu</th>
-                            <td>: {{ $data->agenda_time }}</td>
-                        </tr>
-                    </table>
-
-
-
-                    <div class="border-b border-gray-900/10 pb-12">
-
-                        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-
-                            {{-- ini hidden input untuk masukin id agenda --}}
-                            <input hidden name="agenda_id" id="agenda_id" value="{{ $data->id }}" />
-
-                            <div class="sm:col-span-4">
-                                @error('participant_name')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="participant_name" class="block text-sm/6 font-medium text-gray-900">Nama</label>
-                                <div class="mt-2">
-                                    <input id="participant_name" name="participant_name" type="text" autocomplete="participant_name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-4">
-                                @error('participant_email')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="participant_email" class="block text-sm/6 font-medium text-gray-900">Alamat Email Peserta</label>
-                                <div class="mt-2">
-                                    <input id="participant_email" name="participant_email" type="text" autocomplete="participant_email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-4">
-                                @error('company_name')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="company_name" class="block text-sm/6 font-medium text-gray-900">Nama Instansi/Perusahaan</label>
-                                <div class="mt-2">
-                                    <input id="company_name" name="company_name" type="text" autocomplete="company_name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-4">
-                                @error('participant_orgunit')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="participant_orgunit" class="block text-sm/6 font-medium text-gray-900">Jabatan/Nama Unit Kerja</label>
-                                <div class="mt-2">
-                                    <input id="participant_orgunit" name="participant_orgunit" type="text" autocomplete="participant_orgunit" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-4">
-                                @error('company_address')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="company_address" class="block text-sm/6 font-medium text-gray-900">Alamat Perusahaan</label>
-                                <div class="mt-2">
-                                    <textarea name="company_address" id="company_address" rows="3" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-2">
-                                @error('phone_number')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="phone_number" class="block text-sm/6 font-medium text-gray-900">Nomor Kontak (HP)</label>
-                                <div class="mt-2">
-                                    <input type="text" name="phone_number" id="phone_number" autocomplete="address-level1" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-2">
-                                @error('company_email')
-                                <text for="" class="text-red-900">
-                                    {{ $message }}
-                                </text>
-                                @enderror
-                                <label for="company_email" class="block text-sm/6 font-medium text-gray-900">Alamat Email Perusahaan</label>
-                                <div class="mt-2">
-                                    <input type="text" name="company_email" id="company_email" autocomplete="company_email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                </div>
-                            </div>
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
+        <div class="bg-white rounded-lg p-4">
+            <div class="space-y-12">
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-900 text-center p-10">{{ $data->agenda_name }}</h2>
+                    <form class="max-w-6xl mx-auto" action="{{ route('agenda.store') }}" method="POST">
+                        @csrf
+                        {{-- <div style="overflow-x:auto;"> --}}
+                        <table class="table-auto w-1/3 text-sm text-left rtl:text-right text-gray-900 dark:text-gray-400 mb-10">
+                            <tr>
+                                <th>Hari/Tanggal</th>
+                                <td>: {{ date('d F Y', strtotime($data->agenda_date))}}</td>
+                            </tr>
+                            <tr>
+                                <th>Waktu</th>
+                                <td>: {{ $data->agenda_time }}</td>
+                            </tr>
+                        </table>
+                        {{-- </div> --}}
+                        <div class="border-b mb-5">
+                            <h2 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Info Peserta</h2>
                         </div>
 
-                        <div class="border-gray-900/10">
+                        <input hidden name="agenda_id" id="agenda_id" value="{{ $data->id }}" />
+
+                        <div class="mb-5">
+                            @error('participant_name')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                            <input id="participant_name" name="participant_name" type="text" autocomplete="participant_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="mb-5">
+                            @error('participant_email')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Peserta</label>
+                            <input id="participant_email" name="participant_email" type="text" autocomplete="participant_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="mb-5">
+                            @error('phone_number')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No Handphone Peserta</label>
+                            <input id="phone_number" name="phone_number" type="text" autocomplete="phone_number" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="mb-5">
+                            @error('participant_orgunit')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jabatan/Unit Kerja</label>
+                            <input id="participant_orgunit" name="participant_orgunit" type="text" autocomplete="participant_orgunit" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="border-b mb-5">
+                            <h2 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Info Perusahaan</h2>
+                        </div>
+
+                        <div class="mb-5">
+                            @error('company_name')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Instansi/Perusahaan</label>
+                            <input id="company_name" name="company_name" type="text" autocomplete="company_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="mb-5">
+                            @error('company_address')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Perusahaan</label>
+                            <textarea name="company_address" id="company_address" rows="3" autocomplete="company_address" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
+                        </div>
+
+                        <div class="mb-5">
+                            @error('company_email')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Perusahaan</label>
+                            <input id="company_email" name="company_email" type="text" autocomplete="company_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+
+                        <div class="border-gray-900/10 mb-10 ">
                             <div class="mt-10 space-y-10">
                                 <fieldset>
-                                    <legend class="text-sm/6 font-semibold text-gray-900">Agreement</legend>
+                                    <legend class="text-sm/6 font-semibold text-gray-900">Perjanjian</legend>
                                     <div class="mt-6 space-y-6">
                                         <div class="flex gap-3">
                                             <div class="flex h-6 shrink-0 items-center">
@@ -131,11 +116,11 @@
                                                 </div>
                                             </div>
                                             <div class="text-sm/6">
-                                                <label for="privacy_agreement" class="font-medium text-gray-900">Agreement mengenai perlindungan data pengguna</label>
-                                                <p id="privacy_agreement-description" class="text-gray-500">agreement before submit form</p>
+                                                <label for="privacy_agreement" class="font-medium text-gray-900">Perjanjian mengenai perlindungan data pengguna</label>
+                                                <p id="privacy_agreement-description" class="text-gray-500">Saya setuju untuk memberikan data pribadi saya kepada BCM Indonesia, yang akan digunakan hanya untuk keperluan yang telah dijelaskan dalam Kebijakan Privasi. Saya memahami bahwa data saya akan dilindungi sesuai dengan Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi dan tidak akan dibagikan kepada pihak ketiga tanpa persetujuan saya, kecuali diwajibkan oleh hukum.</p>
                                             </div>
                                         </div>
-                                        <div class="flex gap-3">
+                                        <div class="flex gap-3 border-b mb-5">
                                             <div class="flex h-6 shrink-0 items-center">
                                                 <div class="group grid size-4 grid-cols-1">
                                                     <input id="email_agreement" aria-describedby="email_agreement-description" name="email_agreement" type="checkbox" value="1" class="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
@@ -147,27 +132,37 @@
                                             </div>
                                             <div class="text-sm/6">
                                                 <label for="email_agreement" class="font-medium text-gray-900">Email Promote</label>
-                                                <p id="email_agreement-description" class="text-gray-500">agreement for blasting news letter.</p>
+                                                <p id="email_agreement-description" class="text-gray-500">Dengan mencentang kotak ini, saya setuju untuk menerima email promosi dan informasi terbaru dari BCM Indonesia.
+                                                </p>
                                             </div>
                                         </div>
+                                        <div class="text-sm/6">
+
+                                            <p id="privacy_agreement-description" class="text-gray-500">Kebijakan Privasi <br>
+
+                                                Dengan menggunakan layanan kami dan/atau memberikan data pribadi Anda, Anda menyatakan bahwa Anda setuju untuk memberikan data pribadi Anda kepada kami. Kami berkomitmen untuk menjaga keamanan informasi yang Anda berikan dan memastikan bahwa data tersebut hanya digunakan untuk tujuan yang telah disepakati bersama.
+
+                                                Kami tidak akan membagikan, menjual, atau menyebarluaskan data pribadi Anda kepada pihak ketiga tanpa persetujuan Anda, kecuali diwajibkan oleh hukum. Kebijakan privasi kami mematuhi Peraturan Pemerintah Republik Indonesia No. 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik serta Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi.
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </fieldset>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mt-6 flex items-center justify-end gap-x-6">
-                        <a href="/agenda">
-                            <button type="button" class="text-sm/6 font-semibold text-gray-900">Batal</button>
-                        </a>
-                        <button type="submit" id="submit_button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm disabled:bg-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Simpan</button>
-                    </div>
-            </form>
+                        <div class="mt-6 flex items-center justify-start gap-x-6">
+                            <a href="/agenda">
+                                <button type="button" class="text-sm/6 font-semibold text-gray-900">Batal</button>
+                            </a>
+                            <button type="submit" id="submit_button" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm disabled:bg-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
 </x-layout>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
     function terms_changed(termsCheckBox) {
         //If the checkbox has been checked

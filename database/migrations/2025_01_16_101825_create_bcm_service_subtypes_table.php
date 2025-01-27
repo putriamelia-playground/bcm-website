@@ -14,6 +14,8 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('bcm_service_type_id')->constrained();
             $table->string('service_subtype_name')->nullable();
+            $table->string('service_subtype_slug')->unique();
+            $table->text('service_subtype_desc')->nullable();
             $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
