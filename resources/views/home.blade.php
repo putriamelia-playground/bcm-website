@@ -2,7 +2,7 @@
     <!-- header -->
     <x-slot:title>{{$title}}</x-slot:title>
 
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
         <!-- start image slider -->
         <div id="default-carousel" class="relative w-full mb-14" data-carousel="slide">
@@ -202,7 +202,7 @@
         <!-- end layanan -->
 
         <!-- start testimoni -->
-        <div id="animation-carousel" class="relative w-full mt-14" data-carousel="static">
+        <div id="animation-carousel" class="relative w-full mt-14 mb-14" data-carousel="static">
             <!-- Carousel wrapper -->
             <div class="relative h-auto overflow-hidden rounded-lg md:h-96">
                 <div class="hidden duration-200 ease-linear" data-carousel-item>
@@ -264,6 +264,64 @@
             </button>
         </div>
         <!-- end testimoni -->
+
+        {{-- start our organization --}}
+        <div class="bg-white py-24 sm:py-32 rounded-lg">
+            <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+                <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+                    <li>
+                        <div class="flex flex-col items-center gap-x-6">
+                            <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">
+                            <div>
+                                <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
+                                <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex flex-col items-center gap-x-6">
+                            <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">
+                            <div>
+                                <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
+                                <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex flex-col items-center gap-x-6">
+                            <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">
+                            <div>
+                                <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
+                                <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex flex-col items-center gap-x-6">
+                            <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">
+                            <div>
+                                <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
+                                <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex flex-col items-center gap-x-6">
+                            <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">
+                            <div>
+                                <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
+                                <p class="text-sm/6 font-semibold text-indigo-600">Co-Founder / CEO</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {{-- end our organization --}}
 
     </div>
 </x-layout>
