@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\ArticleSubtype as PivotArticleSubtype;
 use App\Models\ServiceSubType;
 use Illuminate\Http\Request;
 
@@ -31,9 +32,26 @@ class ArticleController extends Controller
 
     public function getDetailTag($slug)
     {
-        $data = ServiceSubType::where('service_subtype_slug', $slug)->first();
-        $title = 'Detail Tag Article Page';
+        $data = PivotArticleSubtype::with('subtypeData')->get();
 
-        return view('detailarticletag', compact('title', 'data'));
+        $articleTagged = [];
+        $title = '';
+        foreach ($data as $key => $value) {
+            if ($value->subtypeData->service_subtype_slug === $slug) {
+                $articleTagged[] = $value;
+                $title = 'Tag ' . $value->subtypeData->service_subtype_name;
+            }
+        }
+
+        $articleId = [];
+        foreach ($articleTagged as $dt => $val) {
+            $articleId[] = $val->bcm_article_id;
+        }
+
+        $result = Article::whereIn('id', $articleId)
+            ->with('articletags')
+            ->get();
+
+        return view('detailarticletag', compact('title', 'result'));
     }
 }

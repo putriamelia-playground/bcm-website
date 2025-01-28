@@ -46,3 +46,7 @@ Route::get('/admin', function () {
 });
 
 Route::resource('inputarticle', InputArticleController::class);
+
+Route::get('/landingenpage', function () {
+    return view('landingenpage');
+});
