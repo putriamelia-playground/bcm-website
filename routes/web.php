@@ -50,3 +50,7 @@ Route::resource('inputarticle', InputArticleController::class);
 Route::get('/landingenpage', function () {
     return view('landingenpage');
 });
+
+Route::get('/regulations', function () {
+    return view('regulations', ['title' => 'Regulations Page']);
+});

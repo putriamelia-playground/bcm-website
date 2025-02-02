@@ -11,7 +11,7 @@ class ArticleController extends Controller
 {
     public function getArticleData()
     {
-        $article = Article::all();
+        $article = Article::orderBy('sort_order')->get();
         $title = 'Article Page';
 
         return view('article', compact(
@@ -21,13 +21,18 @@ class ArticleController extends Controller
 
     public function getArticleDetail($slug)
     {
-        $data = Article::where('article_slug', $slug)->first();
+        $data = Article::where('article_slug', $slug)->with('articletags')->first();
         $slug = $data->article_slug;
         $title = 'Detail Article Page';
+        $slugPivot = $data->articletags[0]->service_subtype_slug;
 
-        return view('detailarticle', compact(
-            'slug', 'title', 'data'
-        ));
+        if ($slugPivot == 'regulasi') {
+            return view('regulations', compact('title'));
+        } else {
+            return view('detailarticle', compact(
+                'slug', 'title', 'data'
+            ));
+        }
     }
 
     public function getDetailTag($slug)
