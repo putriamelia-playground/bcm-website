@@ -25,14 +25,14 @@
                 <div class="flex flex-row items-center right-1 ">
                     <a href="#">
                         <button class="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
-                            <span class="text-md">In</span>
+                            <span class="text-md">ID</span>
                             <span class="ml-1"> <img src="{{ Storage::url('language-logo/ind.png') }}" class="w-5 h-5" /></span>
                         </button>
                     </a>
 
                     <a href="/landingenpage">
                         <button class="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none ">
-                            <span class="text-md">En</span>
+                            <span class="text-md">EN</span>
                             <span class="ml-1"> <img src="{{ Storage::url('language-logo/en.png') }}" class="w-5 h-5" /></span>
                         </button>
                     </a>

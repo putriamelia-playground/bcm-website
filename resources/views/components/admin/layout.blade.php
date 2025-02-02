@@ -10,6 +10,15 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/ir3qtlgn7qdu743nu95uqhnmyw4ya9io5mflv2acjquactuy/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#article_desc', // Replace this CSS selector to match the placeholder element for TinyMCE
+            plugins: 'code lists advlist'
+            , toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+        });
+
+    </script>
 </head>
 <body>
     <x-admin.navbar>

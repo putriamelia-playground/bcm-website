@@ -19,7 +19,7 @@
                             </a>
                             @endforeach
                             <h5 class="mb-2 text-sm font-normal tracking-tight text-gray-900 dark:text-white text-right">{{ date('d F Y', strtotime($data->article_date)) }}</h5>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $data->article_desc }}</p>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ substr(strip_tags($data->article_desc), 0, 300) }} {{ strlen(strip_tags($data->article_desc)) > 300 ? "..." : "" }}</p>
                             <a href="detailarticle/{{ $data->article_slug }}" class="flex flex-row-reverse">
                                 <h5 class="mb-2 text-sm font-medium tracking-tight text-right text-blue-800">Baca Selengkapnya</h5>
                             </a>

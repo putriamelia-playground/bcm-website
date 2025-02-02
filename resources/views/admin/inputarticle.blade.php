@@ -1,5 +1,5 @@
 <x-admin.layout>
-    <div class="flex flex-row bg-white rounded-lg p-4 justify-between">
+    <div class="flex flex-col bg-white rounded-lg p-4 justify-between">
         <form action="{{ route('inputarticle.store') }}" method="POST" enctype="multipart/form-data">
 
             @csrf
@@ -13,28 +13,28 @@
                         <div class="sm:col-span-3">
                             <label for="article_slug" class="block text-sm/6 font-medium text-gray-900">Slug Artikel</label>
                             <div class="mt-2">
-                                <input type="text" name="article_slug" id="article_slug" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                <input type="text" name="article_slug" id="article_slug" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
                         </div>
 
                         <div class="sm:col-span-3">
                             <label for="article_title" class="block text-sm/6 font-medium text-gray-900">Judul Artikel</label>
                             <div class="mt-2">
-                                <input type="text" name="article_title" id="article_title" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                <input type="text" name="article_title" id="article_title" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
                         </div>
 
                         <div class="sm:col-span-3">
                             <label for="article_date" class="block text-sm/6 font-medium text-gray-900">Tanggal Artikel</label>
                             <div class="mt-2">
-                                <input type="date" name="article_date" id="article_date" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                <input type="date" name="article_date" id="article_date" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
                         </div>
 
                         <div class="sm:col-span-3">
                             <label for="article_desc" class="block text-sm/6 font-medium text-gray-900">Deskripsi Artikel</label>
                             <div class="mt-2">
-                                <input type="text" name="article_desc" id="article_desc" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                <textarea name="article_desc" id="article_desc" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
                             </div>
                         </div>
 
@@ -59,26 +59,16 @@
                                 </div>
                             </div>
                         </div>
-
-                        {{-- <div class="mb-3">
-                            <label for="inputImage" class="form-label"><strong>Image:</strong></label>
-                            <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="inputImage">
-                            @error('image')
-                            <div class="form-text text-danger">{{ $message }}
                     </div>
-                    @enderror
-                </div> --}}
+                </div>
+
 
             </div>
-    </div>
 
-
-    </div>
-
-    <div class="mt-6 flex items-center justify-end gap-x-6">
-        <button type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</button>
-        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
-    </div>
-    </form>
+            <div class="mt-6 flex items-center justify-end gap-x-6">
+                <button type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</button>
+                <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+            </div>
+        </form>
     </div>
 </x-admin.layout>

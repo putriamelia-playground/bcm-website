@@ -3,6 +3,7 @@
     <x-slot:title>{{$title}}</x-slot:title>
 
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
+
         <div class="flex flex-row bg-white sm:py-32 rounded-lg p-4 justify-between">
             <div class="max-w-screen-lg mx-auto p-5 sm:p-10 md:p-16">
                 <a class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 mb-10" rel="prev" href="/article"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +12,7 @@
                     </svg> &nbsp; Back
                 </a>
 
-                <div class="mb-10 rounded overflow-hidden flex flex-col mx-auto ">
+                <div class="mb-10 rounded flex flex-col mx-auto ">
                     <div class="text-xl sm:text-4xl font-semibold inline-block transition duration-500 ease-in-out inline-block mb-2">
                         {{$data->article_title}}
                     </div>
@@ -20,8 +21,9 @@
                         <img class="size-1/2" src="{{ Storage::url('corousel-content/example-4.jpg') }}" alt="">
                     </div>
                     <p class="text-gray-700 py-5 text-base leading-8">
-                        {{ $data->article_desc }}
+                        {!! $data->article_desc !!}
                     </p>
+
                     <div class="py-5 text-sm font-regular text-gray-900 flex">
                         <span class="mr-3 flex flex-row items-center">
                             <svg class="text-indigo-600" fill="currentColor" height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -38,3 +40,8 @@
         </div>
     </div>
 </x-layout>
+
+<script>
+    $(ul).css("list-style-type", "circle");
+
+</script>
