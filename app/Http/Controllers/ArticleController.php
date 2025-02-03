@@ -24,10 +24,11 @@ class ArticleController extends Controller
         $data = Article::where('article_slug', $slug)->with('articletags')->first();
         $slug = $data->article_slug;
         $title = 'Detail Article Page';
-        $slugPivot = $data->articletags[0]->service_subtype_slug;
 
-        if ($slugPivot == 'regulasi') {
-            return view('regulations', compact('title'));
+        if (isset($data->articletags[0])) {
+            if ($data->articletags[0]->service_subtype_slug == 'regulasi') {
+                return view('regulations', compact('title'));
+            }
         } else {
             return view('detailarticle', compact(
                 'slug', 'title', 'data'

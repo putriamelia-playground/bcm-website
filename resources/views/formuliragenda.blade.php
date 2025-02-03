@@ -27,43 +27,43 @@
                         <input hidden name="agenda_id" id="agenda_id" value="{{ $data->id }}" />
 
                         <div class="mb-5">
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
+                            <input id="participant_name" name="participant_name" type="text" autocomplete="participant_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('participant_name')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama</label>
-                            <input id="participant_name" name="participant_name" type="text" autocomplete="participant_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="mb-5">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Peserta</label>
+                            <input id="participant_email" name="participant_email" type="text" autocomplete="participant_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('participant_email')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Peserta</label>
-                            <input id="participant_email" name="participant_email" type="text" autocomplete="participant_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="mb-5">
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No Handphone Peserta</label>
+                            <input id="phone_number" name="phone_number" type="text" autocomplete="phone_number" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('phone_number')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">No Handphone Peserta</label>
-                            <input id="phone_number" name="phone_number" type="text" autocomplete="phone_number" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="mb-5">
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jabatan/Unit Kerja</label>
+                            <input id="participant_orgunit" name="participant_orgunit" type="text" autocomplete="participant_orgunit" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('participant_orgunit')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jabatan/Unit Kerja</label>
-                            <input id="participant_orgunit" name="participant_orgunit" type="text" autocomplete="participant_orgunit" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="border-b mb-5">
@@ -71,33 +71,33 @@
                         </div>
 
                         <div class="mb-5">
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Instansi/Perusahaan</label>
+                            <input id="company_name" name="company_name" type="text" autocomplete="company_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('company_name')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Instansi/Perusahaan</label>
-                            <input id="company_name" name="company_name" type="text" autocomplete="company_name" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="mb-5">
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Perusahaan</label>
+                            <textarea name="company_address" id="company_address" rows="3" autocomplete="company_address" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
                             @error('company_address')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Perusahaan</label>
-                            <textarea name="company_address" id="company_address" rows="3" autocomplete="company_address" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
                         </div>
 
                         <div class="mb-5">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Perusahaan</label>
+                            <input id="company_email" name="company_email" type="text" autocomplete="company_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             @error('company_email')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
                             @enderror
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Perusahaan</label>
-                            <input id="company_email" name="company_email" type="text" autocomplete="company_email" class="block w-full rounded-sm bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-200 shadow placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
 
                         <div class="border-gray-900/10 mb-10 ">

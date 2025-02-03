@@ -15,6 +15,11 @@
                             <div class="mt-2">
                                 <input type="text" name="article_slug" id="article_slug" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
+                            @error('article_slug')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-3">
@@ -22,6 +27,11 @@
                             <div class="mt-2">
                                 <input type="text" name="article_title" id="article_title" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
+                            @error('article_title')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-3">
@@ -29,6 +39,11 @@
                             <div class="mt-2">
                                 <input type="date" name="article_date" id="article_date" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
+                            @error('article_date')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
                         </div>
 
                         <div class="sm:col-span-3">
@@ -36,6 +51,11 @@
                             <div class="mt-2">
                                 <textarea name="article_desc" id="article_desc" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>
                             </div>
+                            @error('article_desc')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
                         </div>
 
                         <div class="col-span-full">
@@ -54,7 +74,9 @@
                                     </div>
                                     <p class="text-xs/5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                                     @error('article_image')
-                                    <div class="form-text text-danger">{{ $message }}</div>
+                                    <text for="" class="text-red-900">
+                                        {{ $message }}
+                                    </text>
                                     @enderror
                                 </div>
                             </div>

@@ -40,8 +40,3 @@
         </div>
     </div>
 </x-layout>
-
-<script>
-    $(ul).css("list-style-type", "circle");
-
-</script>

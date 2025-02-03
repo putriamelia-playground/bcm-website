@@ -14,13 +14,13 @@
             margin-left: 20px;
         }
 
-        li {
-            display: list-item;
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
         }
 
-        ul {
-            list-style-type: circle;
-            margin-left: 20px;
+        .nostyle-ul {
+            list-style: none;
         }
 
     </style>
@@ -57,7 +57,7 @@
                         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a href="/regulations" class="hover:underline">Regulasi</a>
                                     </li>
@@ -68,7 +68,7 @@
                             </div>
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                                     </li>
@@ -79,7 +79,7 @@
                             </div>
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                                <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <a href="#" class="hover:underline">Privacy Policy</a>
                                     </li>
