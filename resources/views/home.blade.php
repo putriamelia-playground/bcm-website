@@ -268,7 +268,7 @@
         {{-- start our organization --}}
         <div class="bg-white py-24 sm:py-32 rounded-lg">
             <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
-                <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+                <ul role="list" class="nostyle-ul grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
                     <li>
                         <div class="flex flex-col items-center gap-x-6">
                             <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/org1.jpeg') }}" alt="">

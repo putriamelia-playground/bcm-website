@@ -62,14 +62,14 @@ class AgendaController extends Controller
                 'email_agreement' => '',
             ],
             [
-                'participant_name.required' => 'Field ini wajib diisi !',
-                'participant_email.required' => 'Field ini wajib diisi !',
-                'company_name.required' => 'Field ini wajib diisi !',
-                'participant_orgunit.required' => 'Field ini wajib diisi !',
-                'company_address.required' => 'Field ini wajib diisi !',
-                'phone_number.required' => 'Field ini wajib diisi !',
-                'company_email.required' => 'Field ini wajib diisi !',
-                'privacy_agreement.required' => 'Field ini wajib diisi !',
+                'participant_name.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'participant_email.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'company_name.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'participant_orgunit.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'company_address.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'phone_number.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'company_email.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'privacy_agreement.required' => 'Data yang dimasukkan tidak boleh kosong!',
             ]
         );
 
