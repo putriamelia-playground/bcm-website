@@ -7,7 +7,7 @@
 
                 <div class="border-b border-gray-900/10 pb-12">
                     <h2 class="text-base/7 font-semibold text-gray-900">Input Data Artikel</h2>
-                    <p class="mt-1 text-sm/6 text-gray-600">Use a permanent address where you can receive mail.</p>
+                    <p class="mt-1 text-sm/6 text-gray-600">Isi formulir artikel dengan informasi yang diperlukan.</p>
 
                     <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                         <div class="sm:col-span-3">
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="col-span-full">
-                            <label for="article_image" class="block text-sm/6 font-medium text-gray-900">Cover photo</label>
+                            <label for="article_image" class="block text-sm/6 font-medium text-gray-900">Foto Artikel</label>
                             <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
                                 <div class="text-center">
                                     <svg class="mx-auto size-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">

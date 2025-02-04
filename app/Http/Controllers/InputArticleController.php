@@ -16,7 +16,7 @@ class InputArticleController extends Controller
 
     public function create()
     {
-        $title = 'haloo';
+        $title = 'Input Article';
         return view('admin.inputarticle', compact('title'));
     }
 
@@ -28,7 +28,7 @@ class InputArticleController extends Controller
                 'article_title' => 'required',
                 'article_date' => 'required',
                 'article_desc' => 'required',
-                'article_image' => 'required',
+                'article_image' => 'required|image|mimes:jpeg,png,jpg',
             ],
             [
                 'article_slug.required' => 'Data yang dimasukkan tidak boleh kosong!',
@@ -41,7 +41,7 @@ class InputArticleController extends Controller
             ]
         );
 
-        $request->article_image->move(storage_path('app\public\article-photo'), $request->article_image->getClientOriginalName());
+        $request->article_image->move(storage_path('app/public/article-photo'), $request->article_image->getClientOriginalName());
         $articleform = new Article();
         $articleform->article_slug = $request->article_slug;
         $articleform->article_title = $request->article_title;
@@ -49,10 +49,14 @@ class InputArticleController extends Controller
         $articleform->article_desc = $request->article_desc;
         $articleform->article_image = 'article-photo/' . $request->article_image->getClientOriginalName();
 
-        $data = Article::select('id')->orderby('sort_order', 'desc')->first();
-        $dataFinn = Article::where('id', $data->id)->select('sort_order')->first();
-        $latestSort = $dataFinn->sort_order;
-        $articleform->sort_order = $latestSort + 1;
+        if (Article::all() == null) {
+            $data = Article::select('id')->orderby('sort_order', 'desc')->first();
+            $dataFinn = Article::where('id', $data->id)->select('sort_order')->first();
+            $latestSort = $dataFinn->sort_order;
+            $articleform->sort_order = $latestSort + 1;
+        } else {
+            $agendaform->sort_order = 1;
+        }
         $articleform->save();
 
         return redirect()

@@ -19,7 +19,7 @@
             <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                 @foreach($agenda as $data)
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="" />
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url($data->agenda_pamphlet) }}" alt="" />
                     <div class="p-5">
                         <a href="/detailagenda/{{ $data->agenda_slug }}">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$data->agenda_name}}</h5>
