@@ -24,7 +24,7 @@
         }
 
     </style>
-    <title>Document</title>
+    <title>{{ $title }} | <?= env('APP_NAME') ?></title>
     <link rel="stylesheet" href="texteditor.css">
 </head>
 <body class="h-full">

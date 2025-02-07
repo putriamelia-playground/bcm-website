@@ -42,7 +42,7 @@ class InputAgendaController extends Controller
             ]
         );
 
-        $request->agenda_pamphlet->move(storage_path('pamflet-agenda'), $request->agenda_pamphlet->getClientOriginalName());
+        $request->agenda_pamphlet->move(storage_path('app/public/pamflet-agenda'), $request->agenda_pamphlet->getClientOriginalName());
         $agendaform = new Agenda();
         $agendaform->agenda_slug = $request->agenda_slug;
         $agendaform->agenda_name = $request->agenda_name;
@@ -50,8 +50,6 @@ class InputAgendaController extends Controller
         $agendaform->agenda_time = $request->agenda_time;
         $agendaform->agenda_desc = $request->agenda_desc;
         $agendaform->agenda_pamphlet = 'pamflet-agenda/' . $request->agenda_pamphlet->getClientOriginalName();
-
-        // dd($request->agenda_starttime);
 
         if (Agenda::all() == null) {
             $data = Agenda::select('id')->orderby('sort_order', 'desc')->first();
@@ -65,6 +63,6 @@ class InputAgendaController extends Controller
 
         return redirect()
             ->route('inputagenda.index')
-            ->with('message', 'Formulir Berhasil di Simpan');
+            ->with('success', 'Agenda Berhasil di Simpan');
     }
 }

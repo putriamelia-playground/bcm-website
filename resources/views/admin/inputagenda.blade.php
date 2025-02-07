@@ -9,8 +9,8 @@
                     <h2 class="text-base/7 font-semibold text-gray-900">Input Data Agenda</h2>
                     <p class="mt-1 text-sm/6 text-gray-600">Isi formulir agenda dengan informasi yang diperlukan.</p>
 
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="sm:col-span-3">
+                    <div class="mt-10 grid grid-cols-12 gap-x-6 gap-y-8 sm:grid-cols-6">
+                        <div class="col-span-12 sm:col-span-6">
                             <label for="agenda_slug" class="block text-sm/6 font-medium text-gray-900">Slug Agenda</label>
                             <div class="mt-2">
                                 <input type="text" name="agenda_slug" id="agenda_slug" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
@@ -22,7 +22,7 @@
                             @enderror
                         </div>
 
-                        <div class="sm:col-span-3">
+                        <div class="col-span-12 sm:col-span-6">
                             <label for="agenda_name" class="block text-sm/6 font-medium text-gray-900">Nama Agenda</label>
                             <div class="mt-2">
                                 <input type="text" name="agenda_name" id="agenda_name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
@@ -60,7 +60,7 @@
                             @enderror
                         </div>
 
-                        <div class="sm:col-span-3">
+                        <div class="col-span-12 sm:col-span-6">
                             <label for="agenda_desc" class="block text-sm/6 font-medium text-gray-900">Deskripsi Agenda</label>
                             <div class="mt-2">
                                 <textarea name="agenda_desc" id="agenda_desc" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"></textarea>

@@ -55,12 +55,12 @@ class InputArticleController extends Controller
             $latestSort = $dataFinn->sort_order;
             $articleform->sort_order = $latestSort + 1;
         } else {
-            $agendaform->sort_order = 1;
+            $articleform->sort_order = 1;
         }
         $articleform->save();
 
         return redirect()
             ->route('inputarticle.index')
-            ->with('message', 'Formulir Berhasil di Simpan');
+            ->with('success', 'Artikel Berhasil di Simpan');
     }
 }
