@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dashboard Page | <?= env('APP_NAME')?></title>
     @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
@@ -19,11 +19,20 @@
         });
 
     </script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea#agenda_desc', // Replace this CSS selector to match the placeholder element for TinyMCE
+            plugins: 'code lists advlist'
+            , toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+        });
+
+    </script>
+
 </head>
 <body>
-    <x-admin.navbar>
+    <x-admin.navbar></x-admin.navbar>
 
-    </x-admin.navbar>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
         <main>
             {{ $slot }}

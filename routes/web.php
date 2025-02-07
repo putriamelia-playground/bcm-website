@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\InputAgendaController;
 use App\Http\Controllers\InputArticleController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,10 +43,12 @@ Route::get('/k3-product', function () {
 // });
 
 Route::get('/admin', function () {
-    return view('admin\admindashboard', ['title' => 'Dashboard Admin']);
+    return view('admin.admindashboard', ['title' => 'Dashboard Admin']);
 });
 
 Route::resource('inputarticle', InputArticleController::class);
+
+Route::resource('inputagenda', InputAgendaController::class);
 
 Route::get('/landingenpage', function () {
     return view('landingenpage');

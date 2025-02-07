@@ -19,7 +19,7 @@
             <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                 @foreach($agenda as $data)
                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="" />
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url($data->agenda_pamphlet) }}" alt="" />
                     <div class="p-5">
                         <a href="/detailagenda/{{ $data->agenda_slug }}">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$data->agenda_name}}</h5>
@@ -30,7 +30,7 @@
                         </a>
                         @endforeach
                         <h5 class="mb-2 text-sm font-normal tracking-tight text-gray-900 dark:text-white text-right">{{date('d F Y', strtotime($data->agenda_date))}}</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$data->agenda_desc}}</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ substr(strip_tags($data->agenda_desc), 0, 300) }} {{ strlen(strip_tags($data->agenda_desc)) > 300 ? "..." : "" }}</p>
                         <a href="/detailagenda/{{ $data->agenda_slug }}" class="flex flex-row-reverse">
                             <h5 class="mb-2 text-sm font-medium tracking-tight text-right text-blue-800">Baca Selengkapnya</h5>
                         </a>
