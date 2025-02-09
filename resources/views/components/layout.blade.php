@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="storage/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="storage/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="storage/favicon/favicon-16x16.png">
+    <link rel="manifest" href="storage/favicon/site.webmanifest">
     <style>
         ol {
             list-style-type: decimal;
@@ -21,6 +25,19 @@
 
         .nostyle-ul {
             list-style: none;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: max-content !important;
+            padding-bottom: 64px !important;
+            -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important;
+            position: relative;
+        }
+
+        .swiper-pagination-bullet {
+            background: #4f46e5;
         }
 
     </style>
@@ -37,7 +54,7 @@
             <div>
                 {{ $slot }}
             </div>
-            <div class="fixed bottom-6 right-6">
+            <div class="fixed bottom-6 right-6  !important">
                 <a href="<?= env('CS') ?>" target="_blank" rel="noopener noreferrer" class="bg-gray-800 text-white font-medium rounded-md px-4 py-2 flex items-center justify-center hover:bg-yellow-600 transition duration-300 ease-in-out shadow-lg">
                     <span class="text-lg mr-2">📞</span>
                     Need Help ?

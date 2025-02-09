@@ -67,7 +67,6 @@
                                     </svg>
                                     <div class="mt-4 flex text-sm/6 text-gray-600">
                                         <label for="article_image" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                                            {{-- <span>Upload a file</span> --}}
                                             <input id="article_image" name="article_image" type="file" class="form-control @error('article_image') is-invalid @enderror">
                                         </label>
                                         <p class=" pl-1">or drag and drop</p>
@@ -81,6 +80,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="sm:col-span-3">
+                            {{-- TODO WORDING --}}
+                            <label for="article_desc" class="block text-sm/6 font-medium text-gray-900">Sub Tipe Layanan</label>
+                            <div class="mt-2">
+                                <select id="subtipelayananId" name="subtipelayananId" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>Pilih Sub Tipe Layanan</option>
+                                    @foreach($data as $key)
+                                    <option value="{{ $key->id }}">{{ $key->service_subtype_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            @error('article_desc')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                        </div>
+
                     </div>
                 </div>
 

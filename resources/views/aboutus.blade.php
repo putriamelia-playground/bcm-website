@@ -9,11 +9,8 @@
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Brief Desc & Sejarah</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis tellus a elit volutpat vulputate.
-                    Donec tincidunt sem id nisi ultricies facilisis. Quisque ultricies magna eu nibh molestie, et mollis lorem molestie.
-                    Nunc lobortis eros in urna ullamcorper, in finibus quam hendrerit. Suspendisse tempus luctus elit, eu euismod est euismod ac.
-                    Duis at dui turpis. Phasellus ut magna purus. Proin maximus quam et dui rhoncus tincidunt. Sed sapien mauris, cursus vel ante sit amet, lacinia tincidunt dui.
-                    Nulla scelerisque risus et eros elementum, in vulputate justo tempor.
+                    PT. P3MKU didirikan untuk merespons tingginya kebutuhan organisasi dalam penerapan Business Continuity Management Systems (BCMS). Seiring dengan perkembangan bisnis dan operasional, organisasi dihadapkan pada berbagai tantangan, termasuk perubahan regulasi, penyesuaian terhadap standar internasional, serta risiko bencana dan gangguan yang dapat mempengaruhi keberlangsungan usaha. <br> <br>
+                    Kami hadir untuk membantu perusahaan dalam merancang dan mengimplementasikan strategi ketahanan bisnis yang efektif. Dengan pendekatan berbasis regulasi dan praktik terbaik, P3MKU berkomitmen mendukung organisasi dalam memastikan kesiapan menghadapi risiko serta mencapai tujuan bisnis secara berkelanjutan.
                 </p>
             </div>
         </a>
@@ -26,7 +23,7 @@
             <img class="object-cover max-w-full lg:w-1/2 md:w-1/2 rounded-md h-96" src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
 
-                <div class="block max-w-sm p-6 mb-4 bg-white rounded-lg">
+                <div class="block max-w-full p-6 mb-4 bg-white rounded-lg">
                     <div class="inline-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
@@ -34,10 +31,10 @@
 
                         <h5 class="mb-2 ml-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Visi</h5>
                     </div>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis tellus a elit volutpat vulputate.</p>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Menjadi konsultan menajemen terdepan di Indonesia dalam pengembangan kapabilitas, pelatihan, dan implementasi manajemen keberlangsungan usaha.</p>
                 </div>
 
-                <div class="block max-w-sm p-6 bg-white rounded-lg">
+                <div class="block max-w-full p-6 bg-white rounded-lg">
                     <div class="inline-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
@@ -46,7 +43,7 @@
 
                         <h5 class="mb-2 ml-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Misi</h5>
                     </div>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis tellus a elit volutpat vulputate.</p>
+                    <p class="font-normal text-gray-700 dark:text-gray-400">Menjadi mitra terpercaya bagi organisasi dengan memberikan layanan berkualitas yang mendukung pencapaian tujuan bisnis secara strategis dan berkelanjutan.</p>
                 </div>
 
             </div>
