@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Agenda;
+use App\Models\AgendaSubtype as PivotAgendaSubJenisLayanan;
+use App\Models\ServiceSubType as SubJenisLayanan;
 use Illuminate\Http\Request;
 
 class InputAgendaController extends Controller
@@ -17,7 +19,8 @@ class InputAgendaController extends Controller
     public function create()
     {
         $title = 'Input Agenda';
-        return view('admin.inputagenda', compact('title'));
+        $data = SubJenisLayanan::all();
+        return view('admin.inputagenda', compact('title', 'data'));
     }
 
     public function store(Request $request)
@@ -60,6 +63,11 @@ class InputAgendaController extends Controller
             $agendaform->sort_order = 1;
         }
         $agendaform->save();
+
+        $agendaPivot = new PivotAgendaSubJenisLayanan();
+        $agendaPivot->bcm_agenda_id = $agendaform->id;
+        $agendaPivot->bcm_service_subtype_id = $request->subtipelayananId;
+        $agendaPivot->save();
 
         return redirect()
             ->route('inputagenda.index')

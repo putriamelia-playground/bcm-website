@@ -66,17 +66,16 @@
         <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-14">
             <img class="object-cover w-full rounded-md h-96 lg:1/2 md:w-1/2" src="{{ Storage::url('corousel-content/example-5.jpg') }}" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BCM Indonesia</h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BCM Indonesia, Solusi Keberlanjutan Bisnis Anda</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel cursus urna. In consectetur nulla vel lectus finibus laoreet id vitae ex.
-                    Proin id tortor quis risus dignissim rhoncus non sit amet enim. Proin ullamcorper egestas facilisis. Curabitur auctor eros nec sapien auctor bibendum.
-                    Cras convallis mauris nunc, sed pharetra arcu dignissim in. Nullam viverra quam ac nulla viverra pulvinar.</p>
+                    BCM Indonesia hadir untuk membantu dalam menerapkan Business Continuity Management Systems (BCMS) secara efektif. Kami mendukung perusahaan dalam menghadapi perusbahan regulasi, standarisasi sesuai dengan ketentuan yang berlaku, serta berbagai risiko operasional agar bisnis tetap berjalan dengan lancar dan berkelanjutan.
+                </p>
             </div>
         </div>
         <!-- end overview perusahaan -->
 
         <!-- start layanan -->
-        <div class="flex flex-wrap justify-center mt-10">
+        <div class="flex flex-wrap justify-center mt-10 mb-12">
             <div id="animation-carousel" class="relative w-full" data-carousel="static">
                 <!-- Carousel wrapper -->
                 <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -198,45 +197,45 @@
                 </button>
             </div>
         </div>
-
         <!-- end layanan -->
 
         <!-- start testimoni -->
-        <div id="animation-carousel" class="relative w-full mt-14 mb-14" data-carousel="static">
+        <div id="default-carousel" class="relative w-full mb-14" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-auto overflow-hidden rounded-lg md:h-96">
-                <div class="hidden duration-200 ease-linear" data-carousel-item>
-                    <section class="relative isolate bg-white px-6 py-24">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96 z-0">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-14">
                         <div class="flex justify-center">
                             <div class="flex flex-col">
-                                <img class="mx-auto size-40 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Jamkrindo Syariah</figcaption>
+                                <img class="mx-auto size-16 lg:size-40 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <figcaption class="mt-2 lg:text-lg sm:text-sm text-center text-gray-500 dark:text-gray-400">Jamkrindo Syariah</figcaption>
                             </div>
                             <a href="#" class="flex flex-col items-center bg-white rounded-lg md:flex-row md:max-w-4xl hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 ">
 
-                                <div class="flex flex-col justify-between p-4 leading-normal">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PT Jamkrindo Syariah</h5>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."</p>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Divisi Teknologi Informasi</p>
+                                <div class="flex flex-col justify-between px-4 lg:p-4 leading-normal">
+                                    <h5 class="mb-2 text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PT Jamkrindo Syariah</h5>
+                                    <p class="mb-3 text-xs lg:text-xl text-gray-700 dark:text-gray-400">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."</p>
+                                    <p class="mb-3 hidden lg:block lg:font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Divisi Teknologi Informasi</p>
                                 </div>
                             </a>
                         </div>
                     </section>
                 </div>
 
-                <div class="hidden duration-200 ease-linear" data-carousel-item>
-                    <section class="relative isolate bg-white px-6 py-24">
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-14">
                         <div class="flex justify-center">
                             <div class="flex flex-col">
-                                <img class="mx-auto size-40 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Jamkrindo</figcaption>
+                                <img class="mx-auto size-16 lg:size-40 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <figcaption class="mt-2 lg:text-lg sm:text-sm text-center text-gray-500 dark:text-gray-400">Jamkrindo</figcaption>
                             </div>
                             <a href="#" class="flex flex-col items-center bg-white rounded-lg md:flex-row md:max-w-4xl hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 ">
 
-                                <div class="flex flex-col justify-between p-4 leading-normal">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PT Jamkrindo</h5>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."</p>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Divisi Pengembangan</p>
+                                <div class="flex flex-col justify-between px-4 lg:p-4 leading-normal">
+                                    <h5 class="mb-2 text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PT Jamkrindo</h5>
+                                    <p class="mb-3 text-xs lg:text-xl text-gray-700 dark:text-gray-400">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis."</p>
+                                    <p class="mb-3 hidden lg:block lg:font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Divisi Pengembangan</p>
                                 </div>
                             </a>
                         </div>
@@ -244,7 +243,6 @@
                 </div>
 
             </div>
-
             <!-- Slider controls -->
             <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">

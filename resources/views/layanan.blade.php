@@ -10,13 +10,13 @@
     </div>
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 mb-40">
         <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-14">
-            <img class="object-cover w-full rounded-md h-96 lg:w-1/2" src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
+            <img class="object-fill w-full rounded-md h-96 lg:w-1/2" src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="">
+            <div class="flex flex-col justify-between mx-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BCM Indonesia</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel cursus urna. In consectetur nulla vel lectus finibus laoreet id vitae ex.
-                    Proin id tortor quis risus dignissim rhoncus non sit amet enim. Proin ullamcorper egestas facilisis. Curabitur auctor eros nec sapien auctor bibendum.
-                    Cras convallis mauris nunc, sed pharetra arcu dignissim in. Nullam viverra quam ac nulla viverra pulvinar.</p>
+                    PT P3MKU didirikan untuk merespons tingginya kebutuhan organisasi dan perusahaan dalam penerapan Manajemen Risiko dan Keberlangsungan Usaha. Seiring dengan perkembangan bisnis dan operasional, perusahaan dihadapkan pada berbagai tntangan, termasuk perubahan regulasi, penyesuaian terhadap standar internasional, serta risiko bencana dan gangguan yang dapat memengaruhi keberlangsungan usaha. <br> <br>
+                    Kami hadir untuk membantu perusahaan dalam merancang dan mengimplementasikan stragesi ketahanan bisnis yang efektif bisnis ketahanan bisnis yang efektif. Dengan pendekatan berbasis regulasi dan praktik terbaik, P3MKU berkomitmen mendukung organisasi dalam memastikan kesiapan menghadapi risiko serta mencapai tujuan bisnis secara berkelanjutan.
+                </p>
             </div>
         </div>
 

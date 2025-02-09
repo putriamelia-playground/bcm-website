@@ -7,7 +7,7 @@ use App\Http\Controllers\InputArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['title' => 'Home Page']);
+    return view('home', ['title' => 'BCM Indonesia, Solusi Keberlanjutan Bisnis Anda']);
 });
 
 Route::get('/article', [ArticleController::class, 'getArticleData']);

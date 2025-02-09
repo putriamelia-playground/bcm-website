@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\ArticleSubtype as PivotArticleSubJenisLayanan;
+use App\Models\ServiceSubType as SubJenisLayanan;
 use Illuminate\Http\Request;
 
 class InputArticleController extends Controller
@@ -17,7 +19,8 @@ class InputArticleController extends Controller
     public function create()
     {
         $title = 'Input Article';
-        return view('admin.inputarticle', compact('title'));
+        $data = SubJenisLayanan::all();
+        return view('admin.inputarticle', compact('title', 'data'));
     }
 
     public function store(Request $request)
@@ -58,6 +61,11 @@ class InputArticleController extends Controller
             $articleform->sort_order = 1;
         }
         $articleform->save();
+
+        $articlePivot = new PivotArticleSubJenisLayanan();
+        $articlePivot->bcm_article_id = $articleform->id;
+        $articlePivot->bcm_service_subtype_id = $request->subtipelayananId;
+        $articlePivot->save();
 
         return redirect()
             ->route('inputarticle.index')
