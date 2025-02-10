@@ -17,8 +17,8 @@
                         {{$data->article_title}}
                     </div>
 
-                    <div class="relative">
-                        <img class="size-1/2" src="{{ Storage::url('corousel-content/example-4.jpg') }}" alt="">
+                    <div class="relative md:3/4">
+                        <img class="size-1/2" src="{{ Storage::url($data->article_image) }}" alt="">
                     </div>
                     <p class="text-gray-700 py-5 text-base leading-8">
                         {!! $data->article_desc !!}

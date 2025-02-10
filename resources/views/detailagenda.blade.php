@@ -16,10 +16,10 @@
                     </div>
 
                     <div class="relative md:size-3/4">
-                        <img class="size-3/4 p-10" src="{{ Storage::url('pamflet-agenda/pamflet-1.png') }}" alt="">
+                        <img class="size-3/4 p-10" src="{{ Storage::url($data->agenda_pamphlet) }}" alt="">
                     </div>
                     <p class="text-gray-700 py-5 text-base leading-8">
-                        {{ $data->agenda_desc }}
+                        {!! $data->agenda_desc !!}
                     </p>
                     <div class="py-5 text-sm font-regular text-gray-900 flex">
                         <span class="mr-3 flex flex-row items-center">
