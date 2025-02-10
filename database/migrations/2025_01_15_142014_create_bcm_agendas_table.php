@@ -14,10 +14,12 @@ return new class extends Migration {
             $table->id();
             $table->string('agenda_name')->nullable();
             $table->string('agenda_slug')->unique();
-            $table->date('agenda_date')->nullable();
+            $table->date('agenda_start_date')->nullable();
+            $table->date('agenda_end_date')->nullable();
             $table->string('agenda_time')->nullable();
             $table->text('agenda_desc')->nullable();
-            $table->string('agenda_pamphlet')->nullable();
+            $table->string('agenda_image')->nullable();  // photo on show all agenda
+            $table->string('agenda_pamphlet')->nullable();  // pamphlet on detail agenda
             $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
