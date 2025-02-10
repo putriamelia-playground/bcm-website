@@ -23,37 +23,32 @@
         <div class="flex flex-col bg-white sm:py-32 rounded-lg p-4 justify-between align-center grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3 ">
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Project Implementation</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Penyusunan dan Pengembangan Dokumen</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Consulting Services</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Proses dan Implementasi BCMS</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Technical Advisory</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Audit dan Sertifikasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Maturity Assignment</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pelatihan dan Simulasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Training Services</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pengembangan Aplikasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
                 <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Software Development</div>
-            </div>
-
-            <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">K3 Product</div>
+                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Workshop dan Training</div>
             </div>
         </div>
     </div>
