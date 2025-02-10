@@ -29,30 +29,37 @@ class InputAgendaController extends Controller
             [
                 'agenda_slug' => 'required|unique:bcm_agendas|regex:/^\S*$/u',
                 'agenda_name' => 'required',
-                'agenda_date' => 'required',
+                'agenda_start_date' => 'required',
+                'agenda_end_date' => 'required',
                 'agenda_time' => 'required',
                 'agenda_desc' => 'required',
                 'agenda_pamphlet' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'agenda_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             ],
             [
-                'article_slug.required' => 'Data yang dimasukkan tidak boleh kosong!',
-                'article_slug.unique' => 'Data yang dimasukkan harus unik!',
-                'article_slug.regex' => 'Data yang dimasukkan tidak boleh mengandung spasi!',
-                'article_title.required' => 'Data yang dimasukkan tidak boleh kosong!',
-                'article_date.required' => 'Data yang dimasukkan tidak boleh kosong!',
-                'article_desc.required' => 'Data yang dimasukkan tidak boleh kosong!',
-                'article_image.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_slug.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_slug.unique' => 'Data yang dimasukkan harus unik!',
+                'agenda_slug.regex' => 'Data yang dimasukkan tidak boleh mengandung spasi!',
+                'agenda_name.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_start_date.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_end_date.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_desc.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_pamphlet.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_image.required' => 'Data yang dimasukkan tidak boleh kosong!',
             ]
         );
 
         $request->agenda_pamphlet->move(storage_path('app/public/pamflet-agenda'), $request->agenda_pamphlet->getClientOriginalName());
+        $request->agenda_image->move(storage_path('app/public/pamflet-agenda'), $request->agenda_image->getClientOriginalName());
         $agendaform = new Agenda();
         $agendaform->agenda_slug = $request->agenda_slug;
         $agendaform->agenda_name = $request->agenda_name;
-        $agendaform->agenda_date = $request->agenda_date;
+        $agendaform->agenda_start_date = $request->agenda_start_date;
+        $agendaform->agenda_end_date = $request->agenda_end_date;
         $agendaform->agenda_time = $request->agenda_time;
         $agendaform->agenda_desc = $request->agenda_desc;
         $agendaform->agenda_pamphlet = 'pamflet-agenda/' . $request->agenda_pamphlet->getClientOriginalName();
+        $agendaform->agenda_image = 'pamflet-agenda/' . $request->agenda_image->getClientOriginalName();
 
         if (Agenda::all() == null) {
             $data = Agenda::select('id')->orderby('sort_order', 'desc')->first();
