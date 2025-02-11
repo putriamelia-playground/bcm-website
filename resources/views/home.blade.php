@@ -75,128 +75,95 @@
         <!-- end overview perusahaan -->
 
         <!-- start layanan -->
-        <div class="flex flex-wrap justify-center mt-10 mb-12">
-            <div id="animation-carousel" class="relative w-full" data-carousel="static">
-                <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                    <!-- Slide 1 -->
-                    <div class="hidden duration-700 ease-linear flex flex-row space-x-8" data-carousel-item>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Project Implementation</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Consulting Services</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Technical Advisory</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="hidden duration-700 ease-linear flex flex-row space-x-8" data-carousel-item>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Maturity Assignment</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Training Services</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Software Development</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="hidden duration-700 ease-linear flex flex-row space-x-8" data-carousel-item>
-
-                        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
-                            </a>
-                            <div class="p-5">
-                                <a href="#">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">K3 Product</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
-                            </div>
-                        </div>
+        <div class="relative flex flex-col items-center justify-center mb-14">
+            <div class="carousel scrollbar-hide flex w-full snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth">
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Project Implementation</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
                     </div>
                 </div>
-                <!-- Slider controls -->
-                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
 
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    </a>
+                    <div class="p-5">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Consulting Services</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Technical Advisory</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Maturity Assignment</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Training Services</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Software Development</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
+                    <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">K3 Product</h5>
+                        </a>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum sapien iaculis, venenatis tellus sit amet, dictum leo.</p>
+                    </div>
+                </div>
             </div>
+
+            {{-- <div class="pagination my-4 flex gap-2">
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black w-8"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black md:hidden"></span>
+                <span class="h-3 w-3 ease-out duration-300 rounded-full bg-black md:hidden"></span>
+            </div> --}}
+
+            {{-- <div>
+                <button class="prev-btn bg-gray-200 p-2">Prev</button>
+                <button class="next-btn bg-gray-200 p-2">Next</button>
+            </div> --}}
         </div>
+
         <!-- end layanan -->
 
         <!-- start testimoni -->

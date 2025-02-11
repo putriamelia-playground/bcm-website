@@ -29,11 +29,10 @@ class ArticleController extends Controller
             if ($data->articletags[0]->service_subtype_slug == 'regulasi') {
                 return view('regulations', compact('title'));
             }
-        } else {
-            return view('detailarticle', compact(
-                'slug', 'title', 'data'
-            ));
         }
+        return view('detailarticle', compact(
+            'slug', 'title', 'data'
+        ));
     }
 
     public function getDetailTag($slug)
