@@ -78,7 +78,7 @@
     <div class="relative flex flex-col items-center justify-center mb-14">
         <div class="carousel scrollbar-hide flex w-full snap-x snap-mandatory gap-4 overflow-x-scroll scroll-smooth">
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/project-implementation.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Project Implementation</h5>
@@ -88,7 +88,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/consulting-services.jpg') }}" alt="" />
                 </a>
                 <div class="p-5">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Consulting Services</h5>
@@ -98,7 +98,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/technical-advisory.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Technical Advisory</h5>
@@ -108,7 +108,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/maturity-assignment.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Maturity Assignment</h5>
@@ -118,7 +118,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/training-services.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Training Services</h5>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/software-development.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Software Development</h5>
@@ -138,7 +138,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="rounded-t-lg h-48 w-96 " src="{{ Storage::url('corousel-content/example-2.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/k3-product.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">K3 Product</h5>

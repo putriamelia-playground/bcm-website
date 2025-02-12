@@ -20,35 +20,40 @@
             </div>
         </div>
 
+
+
+
+
+
         <div class="flex flex-col bg-white sm:py-32 rounded-lg p-4 justify-between align-center grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3 ">
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Penyusunan dan Pengembangan Dokumen</div>
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/pengembangan-dokumen.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Penyusunan dan Pengembangan Dokumen</div>
+            </div>
+
+            <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2 ">
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/proses-dan-implementasi-BCMS.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Proses dan Implementasi BCMS</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Proses dan Implementasi BCMS</div>
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/audit-dan-sertifikasi.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Audit dan Sertifikasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Audit dan Sertifikasi</div>
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/pelatihan-dan-simulasi.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pelatihan dan Simulasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pelatihan dan Simulasi</div>
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/pengembangan-aplikasi.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pengembangan Aplikasi</div>
             </div>
 
             <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Pengembangan Aplikasi</div>
-            </div>
-
-            <div class="w-80 h-80 justify-center justify-self-center relative rounded-lg text-wrap p-2">
-                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('corousel-content/example-6.jpg') }}" alt="">
-                <div class="opacity-20 hover:opacity-100 hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Workshop dan Training</div>
+                <img class="h-full w-full object-cover rounded-lg" src="{{ Storage::url('layananpage-service-photo/workshop-dan-training.jpg') }}" alt="">
+                <div class="opacity-20 hover:opacity-100 hover:bg-sky-950 hover:bg-opacity-50 rounded-lg hover:text-3xl duration-300 absolute inset-0 z-10 flex justify-center items-center text-2xl text-white text-center font-semibold">Workshop dan Training</div>
             </div>
         </div>
     </div>
