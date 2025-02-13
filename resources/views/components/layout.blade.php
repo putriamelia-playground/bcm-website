@@ -53,12 +53,13 @@
             <footer class="bg-blue-800 dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div class="md:flex md:justify-between">
-                        <div class="mb-6 md:mb-0">
-                            <a href="https://flowbite.com/" class="flex items-center">
+                        <div class="mb-6 md:mb-0 mr-20">
+                            <p class="flex items-center">
                                 <span class="self-center text-2xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
-                            </a>
-                            <div class="lg:col-span-2 space-y-3">
-                                <p class="text-normal text-white mb-10">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3, Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
+                            </p>
+                            <div class="lg:col-span-2">
+                                <p class="text-normal text-white text-wrap">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3,</p>
+                                <p class="text-normal text-white mb-10 text-wrap">Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
                                 <p>
                                     <img class="h-24 w-48" src="{{ Storage::url('footer-photo/logo-bcm-text.jpeg') }}" class="h-8 me-3" alt="BCM Indonesia Logo" />
                                 </p>
@@ -72,23 +73,27 @@
                                 <ul class="-ml-1">
                                     <input type="email" placeholder="Enter your email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                                 </ul>
-                                <ul class="">
+                                <ul class="-ml-1">
                                     <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Regulasi</h2>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Layanan Kami</h2>
+                                <a href="/regulations">
+                                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Regulasi</h2>
+                                </a>
+                                <a href="/layanan">
+                                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Layanan Kami</h2>
+                                </a>
                                 <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase text-white">Media Sosial Kami</h2>
                                 <ul class="nostyle-ul text-white font-medium">
                                     <li>
-                                        <a href="#" class="hover:underline">Facebook</a>
+                                        <a href="https://www.facebook.com/share/1BstGDUcZd/" class="hover:underline">Facebook</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline">Linkedin</a>
+                                        <a href="https://www.linkedin.com/in/bcm-indonesia-4780bb114/" class="hover:underline">Linkedin</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline">Instagram</a>
+                                        <a href="https://www.instagram.com/bcm.indonesia/" class="hover:underline">Instagram</a>
                                     </li>
                                     <li>
                                         <a href="#" class="hover:underline">Newsletter</a>
