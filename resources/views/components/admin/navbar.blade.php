@@ -10,7 +10,7 @@
                         <x-admin.nav-link href="/admin" :active="request()->is('admin')">Dashboard</x-nav-link>
                             <x-admin.nav-link href="/inputarticle" :active="request()->is('inputarticle')">Input Artikel</x-nav-link>
                                 <x-admin.nav-link href="/inputagenda" :active="request()->is('inputagenda')">Input Agenda</x-nav-link>
-                                    <x-admin.nav-link href="/inputregulations" :active="request()->is('inputregulations')">Input Regulasi</x-nav-link>
+                                    <x-admin.nav-link href="/inputregulation" :active="request()->is('inputregulation')">Input Regulasi</x-nav-link>
                     </div>
                 </div>
             </div>
