@@ -64,7 +64,7 @@
 
     <!-- start overview perusahaan -->
     <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-full hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-14">
-        <img class="object-cover w-full rounded-md h-96 lg:1/2 md:w-1/2" src="{{ Storage::url('corousel-content/example-5.jpg') }}" alt="">
+        <img class="object-cover h-80 w-full object-scale-down rounded-md lg:1/2 md:w-1/2" src="{{ Storage::url('company-overview-photo/company-overview-final.png') }}" alt="">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">BCM Indonesia, Solusi Keberlanjutan Bisnis Anda</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -138,7 +138,7 @@
             </div>
 
             <div class="relative aspect-[1/1] w-[85%] shrink-0 snap-start snap-always border border-gray-200 rounded-lg shadow md:w-[calc(32.30%-(32px/3))]">
-                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/k3-product.jpg') }}" alt="" />
+                <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/K3-product.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">K3 Product</h5>
@@ -223,7 +223,7 @@
                     <div class="flex flex-col items-center gap-x-6">
                         <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/fajar.png') }}" alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Fajar Atrifani</h3>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Fajar Atrifani SE. MM. BCCS.</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600 text-center">Founder</p>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
 
                 <li>
                     <div class="flex flex-col items-center gap-x-6">
-                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/alvin.jpg') }}" alt="">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/alvin.png') }}" alt="">
                         <div>
                             <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Alvin</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600 text-center">Director</p>
@@ -251,7 +251,7 @@
 
                 <li>
                     <div class="flex flex-col items-center gap-x-6">
-                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/nabiilah.jpg') }}" alt="">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/nabiilah.png') }}" alt="">
                         <div>
                             <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Nabiilah Mufiidah</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600 text-center">Support Staff</p>
@@ -261,7 +261,7 @@
 
                 <li>
                     <div class="flex flex-col items-center gap-x-6">
-                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/putri.jpg') }}" alt="">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/putri.png') }}" alt="">
                         <div>
                             <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Putri Amelia</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600 text-center">IT Support</p>
