@@ -103,7 +103,7 @@
                         <div class="border-gray-900/10 mb-10 ">
                             <div class="mt-10 space-y-10">
                                 <fieldset>
-                                    <legend class="text-sm/6 font-semibold text-gray-900">Perjanjian</legend>
+                                    <legend class="text-sm/6 font-semibold text-gray-900">Pernyataan</legend>
                                     <div class="mt-6 space-y-6">
                                         <div class="flex gap-3">
                                             <div class="flex h-6 shrink-0 items-center">
@@ -116,7 +116,7 @@
                                                 </div>
                                             </div>
                                             <div class="text-sm/6">
-                                                <label for="privacy_agreement" class="font-medium text-gray-900">Perjanjian mengenai perlindungan data pengguna</label>
+                                                <label for="privacy_agreement" class="font-medium text-gray-900">Pernyataan mengenai perlindungan data pengguna</label>
                                                 <p id="privacy_agreement-description" class="text-gray-500">Saya setuju untuk memberikan data pribadi saya kepada BCM Indonesia, yang akan digunakan hanya untuk keperluan yang telah dijelaskan dalam Kebijakan Privasi. Saya memahami bahwa data saya akan dilindungi sesuai dengan Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi dan tidak akan dibagikan kepada pihak ketiga tanpa persetujuan saya, kecuali diwajibkan oleh hukum.</p>
                                             </div>
                                         </div>
