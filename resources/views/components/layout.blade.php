@@ -50,53 +50,55 @@
             </div>
 
 
-            <footer class="bg-white dark:bg-gray-900">
+            <footer class="bg-blue-800 dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
                             <a href="https://flowbite.com/" class="flex items-center">
-                                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BCM Indonesia</span>
+                                <span class="self-center text-2xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
                             </a>
+                            <div class="lg:col-span-2 space-y-3">
+                                <p class="text-normal text-white mb-10">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3, Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
+                                <p>
+                                    <img class="h-24 w-48" src="{{ Storage::url('footer-photo/logo-bcm-text.jpeg') }}" class="h-8 me-3" alt="BCM Indonesia Logo" />
+                                </p>
+                            </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+
+                        <div class="grid grid-cols-2 gap-12">
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
-                                    <li class="mb-4">
-                                        <a href="/regulations" class="hover:underline">Regulasi</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
-                                    </li>
+                                <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase text-white">Jangan Lewatkan Kabar Terbaru Kami</h2>
+                                <h2 class="mb-2 text-sm font-normal text-gray-900 text-white">Bergabung dengan Newsletter BCM Indonesia</h2>
+                                <ul class="-ml-1">
+                                    <input type="email" placeholder="Enter your email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                </ul>
+                                <ul class="">
+                                    <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
-                                    <li class="mb-4">
-                                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Regulasi</h2>
+                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Layanan Kami</h2>
+                                <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase text-white">Media Sosial Kami</h2>
+                                <ul class="nostyle-ul text-white font-medium">
+                                    <li>
+                                        <a href="#" class="hover:underline">Facebook</a>
                                     </li>
                                     <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                                <ul class="nostyle-ul text-gray-500 dark:text-gray-400 font-medium">
-                                    <li class="mb-4">
-                                        <a href="#" class="hover:underline">Privacy Policy</a>
+                                        <a href="#" class="hover:underline">Linkedin</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                        <a href="#" class="hover:underline">Instagram</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hover:underline">Newsletter</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <div class="sm:flex sm:items-center sm:justify-between">
+                    {{-- <div class="sm:flex sm:items-center sm:justify-between">
                         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">BCM Indonesia</a>. All Rights Reserved.
                         </span>
                         <div class="flex mt-4 sm:justify-center sm:mt-0">
@@ -131,7 +133,7 @@
                                 <span class="sr-only">Dribbble account</span>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </footer>
 
