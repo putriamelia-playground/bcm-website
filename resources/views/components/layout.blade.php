@@ -53,21 +53,21 @@
             <footer class="bg-blue-800 dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div class="md:flex md:justify-between">
-                        <div class="mb-6 md:mb-0 mr-20">
-                            <p class="flex items-center">
-                                <span class="self-center text-2xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
-                            </p>
-                            <div class="lg:col-span-2">
-                                <p class="text-normal text-white text-wrap">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3,</p>
-                                <p class="text-normal text-white mb-10 text-wrap">Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
-                                <p>
-                                    <img class="h-24 w-48" src="{{ Storage::url('footer-photo/logo-bcm-text.jpeg') }}" class="h-8 me-3" alt="BCM Indonesia Logo" />
+                        <div class="grid lg:grid-cols-7 lg:gap-32 sm:grid-col-2">
+                            <div class="col-span-3">
+                                <p class="flex items-center">
+                                    <span class="self-center text-2xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
                                 </p>
+                                <div class="">
+                                    <p class="text-normal text-white text-wrap">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3,</p>
+                                    <p class="text-normal text-white lg:mb-10 sm:mb-2 md:mb-2 text-wrap">Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
+                                    <div class="sm:mb-10">
+                                        <img class="h-24 w-48" src="{{ Storage::url('footer-photo/logo-bcm-text.jpeg') }}" class="h-8 me-3" alt="BCM Indonesia Logo" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="grid grid-cols-2 gap-12">
-                            <div>
+                            <div class="col-span-2 sm:mb-10">
                                 <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase text-white">Jangan Lewatkan Kabar Terbaru Kami</h2>
                                 <h2 class="mb-2 text-sm font-normal text-gray-900 text-white">Bergabung dengan Newsletter BCM Indonesia</h2>
                                 <ul class="-ml-1">
@@ -77,7 +77,8 @@
                                     <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                                 </ul>
                             </div>
-                            <div>
+
+                            <div class="col-span-2">
                                 <a href="/regulations">
                                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">Regulasi</h2>
                                 </a>

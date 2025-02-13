@@ -6,7 +6,7 @@
                 <h3 class="text-lg font-semibold text-slate-800">Regulations</h3>
                 <p class="text-slate-500">Daftar Regulasi.</p>
             </div>
-            <div class="ml-3">
+            {{-- <div class="ml-3">
                 <div class="w-full max-w-sm min-w-[200px] relative">
                     <div class="relative">
                         <input class="bg-white w-full pr-11 h-10 pl-3 py-2 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded transition duration-200 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md" placeholder="Cari..." />
@@ -17,7 +17,7 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="relative flex flex-col w-full h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-lg bg-clip-border">
@@ -37,42 +37,21 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($regulations as $data)
                     <tr class="hover:bg-slate-50 border-b border-slate-200">
                         <td class="p-4 py-5">
-                            <p class="block font-semibold text-sm text-slate-800">27 Tahun 2022</p>
+                            <p class="block font-semibold text-sm text-slate-800">{{ $data->regulation_number }}</p>
                         </td>
                         <td class="p-4 py-5">
-                            <p class="text-sm text-slate-500">Undang-Undang RI No. 27 Tahun 2022 Tentang Perlindungan Data Pribadi;</p>
+                            <p class="text-sm text-slate-500">{{ $data->regulation_title }}</p>
                         </td>
                     </tr>
-                    <tr class="hover:bg-slate-50 border-b border-slate-200">
-                        <td class="p-4 py-5">
-                            <p class="block font-semibold text-sm text-slate-800">1 Tahun 2023</p>
-                        </td>
-                        <td class="p-4 py-5">
-                            <p class="text-sm text-slate-500">Undang-Undang RI No. 1 Tahun 2023 Tentang Kitab Undang-Undang Hukum Pidana;</p>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50 border-b border-slate-200">
-                        <td class="p-4 py-5">
-                            <p class="block font-semibold text-sm text-slate-800">24 Tahun 2007</p>
-                        </td>
-                        <td class="p-4 py-5">
-                            <p class="text-sm text-slate-500">Undang-Undang Republik Indonesia Nomor 24 Tahun 2007 tanggal 26 April 2007 tentang Penanggulangan Bencana.</p>
-                        </td>
-                    </tr>
-                    <tr class="hover:bg-slate-50 border-b border-slate-200">
-                        <td class="p-4 py-5">
-                            <p class="block font-semibold text-sm text-slate-800">19 Tahun 2016</p>
-                        </td>
-                        <td class="p-4 py-5">
-                            <p class="text-sm text-slate-500">Undang-undang Republik Indonesia Nomor 19 Tahun 2016 tanggal 25 November 2016 tentang Perubahan Perubahan atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik.</p>
-                        </td>
-                    </tr>
+                    @endforeach
+
                 </tbody>
             </table>
 
-            <div class="flex justify-between items-center px-4 py-3">
+            {{-- <div class="flex justify-between items-center px-4 py-3">
                 <div class="text-sm text-slate-500">
                     Showing <b>1-5</b> of 45
                 </div>
@@ -93,7 +72,7 @@
                         Next
                     </button>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
     </div>

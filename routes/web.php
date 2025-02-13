@@ -4,6 +4,7 @@ use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\InputAgendaController;
 use App\Http\Controllers\InputArticleController;
+use App\Http\Controllers\InputRegulationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -50,10 +51,10 @@ Route::resource('inputarticle', InputArticleController::class);
 
 Route::resource('inputagenda', InputAgendaController::class);
 
+Route::resource('inputregulation', InputRegulationController::class);
+
 Route::get('/landingenpage', function () {
     return view('landingenpage');
 });
 
-Route::get('/regulations', function () {
-    return view('regulations', ['title' => 'Regulations Page']);
-});
+Route::get('/regulations', [InputRegulationController::class, 'getData']);
