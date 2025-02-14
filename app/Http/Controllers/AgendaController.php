@@ -86,12 +86,16 @@ class AgendaController extends Controller
         $agendaform->email_agreement = $request->input('email_agreement', 0);
         $agendaform->save();
 
-        $mailData = [
-            'title' => 'This is Testing Email.',
-            'body' => 'This is for testing email using smtp.'
-        ];
+        $data = Agenda::where('id', $request->agenda_id)->select('*')->first();
+        // dd($data);
 
-        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($mailData));
+        $emailSubject = 'Konfirmasi Pendaftaran – ' . $data->agenda_name;
+        $emailParticipantName = $request->participant_name;
+        $emailAgendaName = $data->agenda_name;
+        $emailDateAgenda = date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date));
+        $emailTimeAgenda = $data->agenda_time;
+
+        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($emailSubject, $emailParticipantName, $emailAgendaName, $emailDateAgenda, $emailTimeAgenda));
 
         return redirect()
             ->route('agenda.index')

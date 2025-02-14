@@ -15,12 +15,22 @@ class SubmitMail extends Mailable
 
     public $mailData;
 
+    public $emailSubject,
+        $emailParticipantName,
+        $emailAgendaName,
+        $emailDateAgenda,
+        $emailTimeAgenda;
+
     /**
      * Create a new message instance.
      */
-    public function __construct($mailData)
+    public function __construct($emailSubject, $emailParticipantName, $emailAgendaName, $emailDateAgenda, $emailTimeAgenda)
     {
-        $this->mailData = $mailData;
+        $this->emailSubject = $emailSubject;
+        $this->emailParticipantName = $emailParticipantName;
+        $this->emailAgendaName = $emailAgendaName;
+        $this->emailDateAgenda = $emailDateAgenda;
+        $this->emailTimeAgenda = $emailTimeAgenda;
     }
 
     /**
@@ -29,7 +39,7 @@ class SubmitMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Submit Mail',
+            subject: $this->emailSubject,
         );
     }
 
