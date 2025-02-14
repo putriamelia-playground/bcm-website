@@ -5,7 +5,7 @@
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center p-4">Tentang Kami</h5>
         {{-- start about us --}}
         <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800 mb-14">
-            <img class="object-cover max-w-full lg:w-1/2 md:w-1/2 rounded-md h-96 " src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="">
+            <img class="object-cover max-w-full lg:w-1/2 md:w-1/2 rounded-md h-96 " src="{{ Storage::url('company-overview-photo/tentang-kami.png') }}" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tentang Kami</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -20,7 +20,7 @@
 
         {{-- start visi misi --}}
         <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-full dark:border-gray-700 dark:bg-gray-800">
-            <img class="object-cover max-w-full lg:w-1/2 md:w-1/2 rounded-md h-96" src="{{ Storage::url('corousel-content/example-3.jpg') }}" alt="">
+            <img class="object-cover max-w-full lg:w-1/2 md:w-1/2 rounded-md h-96" src="{{ Storage::url('company-overview-photo/visi-misi.png') }}" alt="">
             <div class="flex flex-col justify-between p-4 leading-normal">
 
                 <div class="block max-w-full p-6 mb-4 bg-white rounded-lg">
@@ -57,11 +57,17 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
                 <div class="mx-auto mt-10 grid grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
                     <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankraya.webp') }}" alt="">
                     <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bpjstk.png') }}" alt="">
                     <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-pelindo.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankjateng.svg') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankbjb.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankjateng.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-banksulselbar.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-brksyariah.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-jamkrindo.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankkalteng.png') }}" alt="">
+                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-jamsyar.png') }}" alt="">
                 </div>
             </div>
         </div>

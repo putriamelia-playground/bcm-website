@@ -53,10 +53,10 @@
             <footer class="bg-blue-800 dark:bg-gray-900">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div class="md:flex md:justify-between">
-                        <div class="grid lg:grid-cols-7 lg:gap-32 sm:grid-col-2">
+                        <div class="grid lg:grid-cols-7 lg:gap-24 sm:grid-col-2">
                             <div class="col-span-3">
                                 <p class="flex items-center">
-                                    <span class="self-center text-2xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
+                                    <span class="self-center text-xl font-semibold text-white text-wrap mb-2">PT PUSAT PENDIDIKAN DAN PELATIHAN MANAJEMEN KEBERLANGSUNGAN USAHA</span>
                                 </p>
                                 <div class="">
                                     <p class="text-normal text-white text-wrap">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3,</p>
