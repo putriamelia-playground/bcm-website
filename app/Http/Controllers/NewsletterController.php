@@ -9,7 +9,7 @@ class NewsletterController extends Controller
 {
     public function index()
     {
-        $title = '';
+        $title = 'Newsletter';
 
         return view('landingnewsletter', compact('title'));
     }
