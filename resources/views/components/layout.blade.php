@@ -61,21 +61,25 @@
                                 <div class="">
                                     <p class="text-normal text-white text-wrap">Jl. Prof DR. Soepomo SH No. 23 RT 3 / RW 3,</p>
                                     <p class="text-normal text-white lg:mb-10 sm:mb-2 md:mb-2 text-wrap">Kelurahan Tebet Barat Kecamatan Tebet Jakarta Selatan 12810</p>
-                                    <div class="sm:mb-10">
+                                    <div class="mb-10">
                                         <img class="h-24 w-48" src="{{ Storage::url('footer-photo/logo-bcm-text.jpeg') }}" class="h-8 me-3" alt="BCM Indonesia Logo" />
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-span-2 sm:mb-10">
+                            <div class="col-span-2 mb-10">
                                 <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase text-white">Jangan Lewatkan Kabar Terbaru Kami</h2>
                                 <h2 class="mb-2 text-sm font-normal text-gray-900 text-white">Bergabung dengan Newsletter BCM Indonesia</h2>
-                                <ul class="-ml-1">
-                                    <input type="email" placeholder="Enter your email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
-                                </ul>
-                                <ul class="-ml-1">
-                                    <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                                </ul>
+                                <form action="{{ route('inputemailnewsletter.store') }}" method="POST">
+                                    @csrf
+
+                                    <ul class="-ml-1">
+                                        <input id="newsletter_email" name="newsletter_email" type="email" placeholder="Enter your email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                    </ul>
+                                    <ul class="-ml-1">
+                                        <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                                    </ul>
+                                </form>
                             </div>
 
                             <div class="col-span-2">
