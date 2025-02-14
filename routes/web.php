@@ -5,6 +5,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\InputAgendaController;
 use App\Http\Controllers\InputArticleController;
 use App\Http\Controllers\InputRegulationController;
+use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -58,3 +59,5 @@ Route::get('/landingenpage', function () {
 });
 
 Route::get('/regulations', [InputRegulationController::class, 'getData']);
+
+Route::resource('inputemailnewsletter', NewsletterController::class);
