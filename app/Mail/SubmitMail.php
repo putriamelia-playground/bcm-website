@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Mail\Mailable;
@@ -29,7 +30,7 @@ class SubmitMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Submit Mail',
+            subject: $this->mailData['emailSubject'],
         );
     }
 
@@ -50,6 +51,9 @@ class SubmitMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromData(fn() => $this->mailData['pdf']->output(), 'Konfirmasi Pendaftaran.pdf')
+                ->withMime('application/pdf'),
+        ];
     }
 }

@@ -32,6 +32,8 @@ class InputAgendaController extends Controller
                 'agenda_start_date' => 'required',
                 'agenda_end_date' => 'required',
                 'agenda_time' => 'required',
+                'agenda_loc_address' => 'required',
+                'agenda_loc_link' => 'required',
                 'agenda_desc' => 'required',
                 'agenda_pamphlet' => 'required|image|mimes:jpeg,png,jpg|max:2048',
                 'agenda_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
@@ -43,6 +45,9 @@ class InputAgendaController extends Controller
                 'agenda_name.required' => 'Data yang dimasukkan tidak boleh kosong!',
                 'agenda_start_date.required' => 'Data yang dimasukkan tidak boleh kosong!',
                 'agenda_end_date.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_time.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_loc_address.required' => 'Data yang dimasukkan tidak boleh kosong!',
+                'agenda_loc_link.required' => 'Data yang dimasukkan tidak boleh kosong!',
                 'agenda_desc.required' => 'Data yang dimasukkan tidak boleh kosong!',
                 'agenda_pamphlet.required' => 'Data yang dimasukkan tidak boleh kosong!',
                 'agenda_image.required' => 'Data yang dimasukkan tidak boleh kosong!',
@@ -57,6 +62,8 @@ class InputAgendaController extends Controller
         $agendaform->agenda_start_date = $request->agenda_start_date;
         $agendaform->agenda_end_date = $request->agenda_end_date;
         $agendaform->agenda_time = $request->agenda_time;
+        $agendaform->agenda_loc_address = $request->agenda_loc_address;
+        $agendaform->agenda_loc_link = $request->agenda_loc_link;
         $agendaform->agenda_desc = $request->agenda_desc;
         $agendaform->agenda_pamphlet = 'pamflet-agenda/' . $request->agenda_pamphlet->getClientOriginalName();
         $agendaform->agenda_image = 'pamflet-agenda/' . $request->agenda_image->getClientOriginalName();

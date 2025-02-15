@@ -32,7 +32,7 @@ class ServiceTypeSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'service_name' => 'Maturity Assignment',
+                'service_name' => 'Maturity Assessment',
                 'sort_order' => 4,
             ],
             [

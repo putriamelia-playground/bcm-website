@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->date('agenda_start_date')->nullable();
             $table->date('agenda_end_date')->nullable();
             $table->string('agenda_time')->nullable();
+            $table->string('agenda_loc_address')->nullable();
+            $table->string('agenda_loc_link')->nullable();
             $table->text('agenda_desc')->nullable();
             $table->string('agenda_image')->nullable();  // photo on show all agenda
             $table->string('agenda_pamphlet')->nullable();  // pamphlet on detail agenda

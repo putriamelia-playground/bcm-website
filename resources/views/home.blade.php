@@ -111,7 +111,7 @@
                 <img class="object-cover rounded-t-lg h-48 w-96 " src="{{ Storage::url('homepage-service-photo/maturity-assignment.jpg') }}" alt="" />
                 <div class="p-5">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Maturity Assignment</h5>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Maturity Assessment</h5>
                     </a>
                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Layanan ini bertujuan untuk mengukur tingkat kesiapan dan kematangan BCMS di perusahaan Anda. Kami memberikan analisis komprehensif serta rekomendasi strategis untuk peningkatan yang berkelanjutan.</p>
                 </div>
