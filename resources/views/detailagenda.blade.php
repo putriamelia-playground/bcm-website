@@ -16,7 +16,7 @@
                     </div>
 
                     <div class="sm:text-md md:text-md text-center font-normal inline-block transition duration-500 ease-in-out inline-block mb-2">
-                        {{ date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date)) . ', ' . $data->agenda_time }}
+                        {{ date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date)) . ' | ' . $data->agenda_time . ' | ' . $data->agenda_loc_address }}
                     </div>
 
                     <div class="flex flex-col items-center relative md:size-3/4">

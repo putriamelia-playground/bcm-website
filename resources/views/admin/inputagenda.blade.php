@@ -59,12 +59,35 @@
                         </div>
 
                         <div class="sm:col-span-6">
-
                             <label for="agenda_time" class="block text-sm/6 font-medium text-gray-900">Jam Agenda</label>
                             <div class="mt-2">
                                 <input type="text" name="agenda_time" id="agenda_time" placeholder="ex : 08.00 - 16.00" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
                             @error('agenda_time')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                        </div>
+
+                        <div class="sm:col-span-6">
+                            <label for="agenda_loc_address" class="block text-sm/6 font-medium text-gray-900">Lokasi Agenda</label>
+                            <div class="mt-2">
+                                <input type="text" name="agenda_loc_address" id="agenda_loc_address" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            </div>
+                            @error('agenda_loc_address')
+                            <text for="" class="text-red-900">
+                                {{ $message }}
+                            </text>
+                            @enderror
+                        </div>
+
+                        <div class="sm:col-span-6">
+                            <label for="agenda_loc_link" class="block text-sm/6 font-medium text-gray-900">Link Lokasi Agenda (Opsional)</label>
+                            <div class="mt-2">
+                                <input type="text" name="agenda_loc_link" id="agenda_loc_link" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            </div>
+                            @error('agenda_loc_link')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>

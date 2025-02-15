@@ -6,13 +6,13 @@
 <body>
 
     <p>
-        Yth. {{ $emailParticipantName }},
+        Yth. {{ $mailData['emailParticipantName'] }},
     </p>
     <p>
-        Kami mengucapkan terima kasih atas pendaftaran Anda untuk mengikuti {{ $emailAgendaName }}, yang akan diselenggarakan pada: <br>
-        📅 Tanggal: {{ $emailDateAgenda }} <br>
-        ⏰ Waktu: {{ $emailTimeAgenda }} <br>
-        📍 Lokasi: [Tempat/Link jika online] <br>
+        Kami mengucapkan terima kasih atas pendaftaran Anda untuk mengikuti {{ $mailData['emailAgendaName'] }}, yang akan diselenggarakan pada: <br>
+        📅 Tanggal: {{ $mailData['emailDateAgenda'] }} <br>
+        ⏰ Waktu: {{ $mailData['emailTimeAgenda'] }} <br>
+        📍 Lokasi: {{ $mailData['emailAddressAgenda'] }} | {{ $mailData['emailAddressLinkAgenda'] }}<br>
     </p>
     <p>
         Pendaftaran Anda telah kami terima, dan kami menantikan kehadiran Anda dalam acara ini. Mohon pastikan untuk mencatat jadwal serta mempersiapkan diri sesuai dengan ketentuan yang telah ditetapkan.

@@ -4,6 +4,7 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Mail\Mailable;
@@ -15,22 +16,12 @@ class SubmitMail extends Mailable
 
     public $mailData;
 
-    public $emailSubject,
-        $emailParticipantName,
-        $emailAgendaName,
-        $emailDateAgenda,
-        $emailTimeAgenda;
-
     /**
      * Create a new message instance.
      */
-    public function __construct($emailSubject, $emailParticipantName, $emailAgendaName, $emailDateAgenda, $emailTimeAgenda)
+    public function __construct($mailData)
     {
-        $this->emailSubject = $emailSubject;
-        $this->emailParticipantName = $emailParticipantName;
-        $this->emailAgendaName = $emailAgendaName;
-        $this->emailDateAgenda = $emailDateAgenda;
-        $this->emailTimeAgenda = $emailTimeAgenda;
+        $this->mailData = $mailData;
     }
 
     /**
@@ -39,7 +30,7 @@ class SubmitMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: $this->emailSubject,
+            subject: $this->mailData['emailSubject'],
         );
     }
 
@@ -60,6 +51,9 @@ class SubmitMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromData(fn() => $this->mailData['pdf']->output(), 'Konfirmasi Pendaftaran.pdf')
+                ->withMime('application/pdf'),
+        ];
     }
 }

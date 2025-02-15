@@ -12,11 +12,15 @@
                         <table class="table-auto w-1/3 text-sm text-left rtl:text-right text-gray-900 dark:text-gray-400 mb-10">
                             <tr>
                                 <th>Hari/Tanggal</th>
-                                <td>: {{ date('d F Y', strtotime($data->agenda_date))}}</td>
+                                <td>: {{ date('d F Y', strtotime($data->agenda_start_date))}} - {{ date('d F Y', strtotime($data->agenda_end_date))}}</td>
                             </tr>
                             <tr>
                                 <th>Waktu</th>
                                 <td>: {{ $data->agenda_time }}</td>
+                            </tr>
+                            <tr>
+                                <th>Tempat</th>
+                                <td>: {{ $data->agenda_loc_address }}</td>
                             </tr>
                         </table>
                         {{-- </div> --}}

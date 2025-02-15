@@ -8,6 +8,7 @@ use App\Models\Form;
 use App\Models\ServiceSubType;
 use Illuminate\Http\Request;
 use Mail;
+use PDF;
 
 class AgendaController extends Controller
 {
@@ -87,15 +88,29 @@ class AgendaController extends Controller
         $agendaform->save();
 
         $data = Agenda::where('id', $request->agenda_id)->select('*')->first();
-        // dd($data);
 
-        $emailSubject = 'Konfirmasi Pendaftaran – ' . $data->agenda_name;
-        $emailParticipantName = $request->participant_name;
-        $emailAgendaName = $data->agenda_name;
-        $emailDateAgenda = date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date));
-        $emailTimeAgenda = $data->agenda_time;
+        $mailData = [
+            'emailSubject' => 'Konfirmasi Pendaftaran – ' . $data->agenda_name,
+            'emailParticipantName' => $request->participant_name,
+            'emailAgendaName' => $data->agenda_name,
+            'emailDateAgenda' => date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date)),
+            'emailTimeAgenda' => $data->agenda_time,
+            'emailAddressAgenda' => $data->agenda_loc_address,
+            'emailAddressLinkAgenda' => $data->agenda_loc_link,
+            'title' => 'Konfirmasi Pendaftaran ' . $data->agenda_name,
+            // for pdf
+            'participantEmail' => $request->participant_email,
+            'participantNumber' => $request->phone_number,
+            'participantUker' => $request->participant_orgunit,
+            'companyName' => $request->company_name,
+            'companyAddress' => $request->company_address,
+            'companyEmail' => $request->company_email,
+        ];
 
-        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($emailSubject, $emailParticipantName, $emailAgendaName, $emailDateAgenda, $emailTimeAgenda));
+        $pdf = PDF::loadView('emails.myTestMail', $mailData);
+        $mailData['pdf'] = $pdf;
+
+        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($mailData));
 
         return redirect()
             ->route('agenda.index')
