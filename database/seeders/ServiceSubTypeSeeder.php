@@ -30,6 +30,14 @@ class ServiceSubTypeSeeder extends Seeder
                 'service_subtype_desc' => 'Sed egestas rutrum purus, id gravida est maximus quis. Nulla eget est a arcu rhoncus venenatis. Donec facilisis, mi a iaculis dignissim, mauris risus euismod sapien, id ultricies ex turpis in metus. Pellentesque fermentum magna non posuere sagittis.',
                 'sort_order' => 2,
             ],
+            [
+                'id' => 3,
+                'bcm_service_type_id' => 3,
+                'service_subtype_name' => 'Cyber Security',
+                'service_subtype_slug' => 'cyber-security',
+                'service_subtype_desc' => 'Sed egestas rutrum purus, id gravida est maximus quis. Nulla eget est a arcu rhoncus venenatis. Donec facilisis, mi a iaculis dignissim, mauris risus euismod sapien, id ultricies ex turpis in metus. Pellentesque fermentum magna non posuere sagittis.',
+                'sort_order' => 3,
+            ],
         ];
 
         \DB::table('bcm_service_subtypes')->insert($data);
