@@ -10,7 +10,7 @@
                         </path>
                     </svg> &nbsp; Back
                 </a>
-                <div class="flex flex-col items-center mb-10 rounded overflow-hidden mx-auto">
+                <div class="flex flex-col mb-10 rounded overflow-hidden mx-auto">
                     <div class="sm:text-2xl md:text-3xl text-center font-semibold inline-block transition duration-500 ease-in-out inline-block mb-2">
                         {{$data->agenda_name}}
                     </div>
@@ -19,8 +19,8 @@
                         {{ date('d F Y', strtotime($data->agenda_start_date)) . ' - ' . date('d F Y', strtotime($data->agenda_end_date)) . ' | ' . $data->agenda_time . ' | ' . $data->agenda_loc_address }}
                     </div>
 
-                    <div class="flex flex-col items-center relative md:size-3/4">
-                        <img class="sm:w-full lg:size-3/4 lg:p-10" src="{{ Storage::url($data->agenda_pamphlet) }}" alt="">
+                    <div class="flex flex-col items-center">
+                        <img class="w-96" src="{{ Storage::url($data->agenda_pamphlet) }}" alt="">
                     </div>
 
                     <p class="text-gray-700 py-5 text-base leading-8">
