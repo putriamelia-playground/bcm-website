@@ -3,7 +3,9 @@
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
-                    <img class="size-8" src="{{ Storage::url('favicon/favicon.ico') }}" alt="BCM Indonesia">
+                    <a href="/">
+                        <img class="size-8" src="{{ Storage::url('favicon/favicon.ico') }}" alt="BCM Indonesia">
+                    </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">

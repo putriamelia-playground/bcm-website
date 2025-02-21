@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\SubmitMail;
 use App\Models\Agenda;
+use App\Models\AgendaSubtype as PivotAgendaSubtype;
 use App\Models\Form;
 use App\Models\ServiceSubType;
 use Illuminate\Http\Request;
@@ -35,10 +36,27 @@ class AgendaController extends Controller
 
     public function getDetailTag($slug)
     {
-        $data = ServiceSubType::where('service_subtype_slug', $slug)->first();
-        $title = 'Detail Tag Agenda Page';
+        $data = PivotAgendaSubtype::with('subtypeData')->get();
 
-        return view('detailagendatag', compact('title', 'data'));
+        $agendaTagged = [];
+        $title = '';
+        foreach ($data as $key => $value) {
+            if ($value->subtypeData->service_subtype_slug === $slug) {
+                $agendaTagged[] = $value;
+                $title = 'Tag ' . $value->subtypeData->service_subtype_name;
+            }
+        }
+
+        $agendaId = [];
+        foreach ($agendaTagged as $dt => $val) {
+            $agendaId[] = $val->bcm_agenda_id;
+        }
+
+        $result = Agenda::whereIn('id', $agendaId)
+            ->with('agendatags')
+            ->get();
+
+        return view('detailagendatag', compact('title', 'result'));
     }
 
     public function getAgendaFormulirDetail($slug)
