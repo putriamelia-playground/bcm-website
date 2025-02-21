@@ -35,7 +35,7 @@
                             $description = htmlspecialchars_decode($data->agenda_desc, ENT_QUOTES);
    
                             $final = substr(strip_tags($description), 0, 100);
-                            echo $final;
+                            echo $final . '...';
                             ?></p>
                         <a href="/detailagenda/{{ $data->agenda_slug }}" class="flex flex-row-reverse">
                             <h5 class="mb-2 text-sm font-medium tracking-tight text-right text-blue-800">Baca Selengkapnya</h5>
