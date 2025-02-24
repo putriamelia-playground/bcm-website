@@ -26,6 +26,8 @@ Route::get('/detailagendatag/{slug}', [AgendaController::class, 'getDetailTag'])
 
 Route::get('/detailarticletag/{slug}', [ArticleController::class, 'getDetailTag']);
 
+Route::get('/detailarticle/{slug}/download', [ArticleController::class, 'getArticleDownload'])->name('article.download');
+
 Route::resource('agenda', AgendaController::class);
 
 Route::get('/about-us', function () {
@@ -59,5 +61,7 @@ Route::get('/landingenpage', function () {
 });
 
 Route::get('/regulations', [InputRegulationController::class, 'getData']);
+
+// Route::get('/newsletter', [NewsletterController::class, 'getData']);
 
 Route::resource('inputemailnewsletter', NewsletterController::class);

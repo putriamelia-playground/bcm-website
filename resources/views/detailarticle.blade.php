@@ -29,14 +29,26 @@
                 </div>
 
                 <div class="flex justify-end border-y">
+                    <div class="relative flex z-10 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white rounded-md p-2 focus:outline-none focus:border-blue-400 mb-3 mt-3 mr-3">
+                        <a href="{{ route('article.download', $slug) }}">Download Article</a>
+                    </div>
+
                     <input type="text" hidden value="{{ url()->current() }}" id="myInput">
-                    <button class="sharebtn relative flex z-10 bg-white border rounded-md p-2 focus:outline-none focus:border-blue-400 mb-3 mt-3" onclick="myFunction()">
-                        <span class="inline-block pr-4 text-gray-600">Share</span>
+                    <button class="sharebtn relative flex z-10 bg-white rounded-md p-2 focus:outline-none focus:border-blue-400 mb-3 mt-3" onclick="myFunction()">
+                        <span class="inline-block pr-4 text-gray-600 -mb-2">Share</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-6 my-1 text-blue-700">
                             <path fill="currentColor" d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z">
                             </path>
                         </svg>
                     </button>
+
+                    <div class="relative flex z-10 bg-white rounded-md p-2 focus:outline-none focus:border-blue-400 mb-3 mt-3 ml-3">
+                        <span class="inline-block pr-4 text-gray-600">Views Count</span>
+                        <span class="text-gray-600 mr-3">{{ $finalViewCount }}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

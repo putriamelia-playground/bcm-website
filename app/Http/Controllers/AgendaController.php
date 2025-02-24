@@ -125,7 +125,7 @@ class AgendaController extends Controller
             'companyEmail' => $request->company_email,
         ];
 
-        $pdf = PDF::loadView('emails.myTestMail', $mailData);
+        $pdf = PDF::loadView('emails.formToPDF', $mailData);
         $mailData['pdf'] = $pdf;
 
         Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($mailData));
