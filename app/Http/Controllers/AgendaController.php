@@ -128,7 +128,7 @@ class AgendaController extends Controller
         $pdf = PDF::loadView('emails.formToPDF', $mailData);
         $mailData['pdf'] = $pdf;
 
-        Mail::to($request->participant_email)->cc($request->company_email)->send(new SubmitMail($mailData));
+        Mail::to($request->participant_email)->cc([$request->company_email, 'nabila@bcm-indonesia.com', 'alvin@bcm-indonesia.com', 'info@bcm-indonesia.com'])->send(new SubmitMail($mailData));
 
         return redirect()
             ->route('agenda.index')
