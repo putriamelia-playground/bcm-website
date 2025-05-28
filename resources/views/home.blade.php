@@ -152,7 +152,8 @@
     <!-- end layanan -->
 
     <!-- start testimoni -->
-    <div id="default-carousel" class="relative w-full mb-14" data-carousel="slide">
+    {{-- <div id="default-carousel" class="relative w-full mb-6" data-carousel="slide"> --}}
+    <div id="controls-carousel" class="relative w-full mb-6" data-carousel="static">
         <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96 z-0">
             <!-- Item 1 -->
@@ -160,7 +161,7 @@
                 <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-14">
                     <div class="flex justify-center">
                         <div class="flex flex-col">
-                            <img class="mx-auto size-16 lg:size-40 rounded-full" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
+                            <img class="max-w-full h-auto lg:size-40 rounded-full" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
                             <figcaption class="mt-2 lg:text-lg sm:text-sm text-center text-gray-500 dark:text-gray-400">Gusti M. Ready</figcaption>
                         </div>
                         <div class="flex flex-col items-center bg-white rounded-lg md:flex-row md:max-w-4xl hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 ">
@@ -176,17 +177,51 @@
             </div>
 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-14">
-                    <div class="flex justify-center">
-                        <div class="flex flex-col">
-                            <img class="mx-auto size-16 lg:size-40 rounded-full" src="{{ Storage::url('client-logo/logo-jamsyar.png') }}" alt="">
+                <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-6">
+                    <div class="flex justify-center items-center gap-6">
+                        <!-- added items-center and gap -->
+                        <!-- Logo -->
+                        <div class="flex flex-col items-center mb-20">
+                            <img class="max-w-full h-auto lg:size-40 rounded-full" src="{{ Storage::url('client-logo/logo-jamsyar.png') }}" alt="">
                             <figcaption class="mt-2 lg:text-lg sm:text-sm text-center text-gray-500 dark:text-gray-400">Suhastomo Widyanto</figcaption>
                         </div>
-                        <div class="flex flex-col items-center bg-white rounded-lg md:flex-row md:max-w-4xl hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 ">
-                            <div class="flex flex-col justify-between px-4 lg:p-4 leading-normal">
+
+                        <!-- Testimonial Card -->
+                        <div class="flex items-center bg-white rounded-lg md:max-w-4xl hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 w-full max-w-3xl h-[400px]">
+                            <!-- fixed card height -->
+                            <div class="flex flex-col justify-center px-4 lg:p-6 leading-normal w-full">
                                 <h5 class="mb-2 text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">PT Penjaminan Jamkrindo Syariah</h5>
-                                <p class="mb-3 text-xs lg:text-xl text-gray-700 dark:text-gray-400">“Aplikasi SIMR Terintegrasi ini sangat bermanfaat buat kami dalam mendukung penetapan/pemantauan risk appetite dan risk tolerance, memonitor raport penerapan Manajemen Risiko dan pemantauan ekposur risiko serta bisa digunakan sebagai dasar pertimbangan dalam pengambilan kebijakan & strategi selanjutnya. SIMR ini juga memudahkan kami untuk mengerjakan dan memantau serta mengakses secara online melalui Web. Terima kasih dan sukses selalu untuk Tim PPKMU."</p>
-                                <p class="mb-3 hidden lg:block lg:font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Bagian Pengembangan</p>
+                                <p class="mb-3 text-xs lg:text-xl text-gray-700 dark:text-gray-400 overflow-auto max-h-48">
+                                    “Aplikasi SIMR Terintegrasi ini sangat bermanfaat buat kami dalam mendukung penetapan/pemantauan risk appetite dan risk tolerance, memonitor raport penerapan Manajemen Risiko dan pemantauan ekposur risiko serta bisa digunakan sebagai dasar pertimbangan dalam pengambilan kebijakan & strategi selanjutnya. SIMR ini juga memudahkan kami untuk mengerjakan dan memantau serta mengakses secara online melalui Web. Terima kasih dan sukses selalu untuk Tim PPKMU."
+                                </p>
+                                <p class="hidden lg:block lg:font-normal text-gray-700 dark:text-gray-400 text-right">Kepala Bagian Pengembangan</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <section class="relative isolate bg-white lg:px-6 lg:py-24 px-4 py-6">
+                    <div class="flex justify-center">
+                        <div class="flex items-center gap-6 max-w-5xl">
+                            <div class="flex flex-col items-center">
+                                <img class="max-w-full h-auto lg:size-40 rounded-full" src="{{ Storage::url('client-logo/logo-ccbi-testi.jpg') }}" alt="">
+                                <figcaption class="mt-2 lg:text-lg sm:text-sm text-center text-gray-500 dark:text-gray-400">Kevin Yosua</figcaption>
+                            </div>
+
+                            <div class="flex flex-col bg-white rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 md:max-w-4xl">
+                                <div class="flex flex-col justify-between px-4 lg:p-6 leading-normal">
+                                    <h5 class="mb-2 text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bank CCB Indonesia</h5>
+                                    <p class="mb-3 text-xs lg:text-xl text-gray-700 dark:text-gray-400">“Saya sangat mengapresiasi profesionalisme dan kualitas layanan yang diberikan oleh tim BCM Indonesia.
+
+                                        Selama proses training, materi disampaikan dengan sangat jelas, terstruktur, dan mudah dipahami. Pendekatan yang digunakan juga interaktif dan aplikatif, sehingga sangat membantu dalam penerapan di pekerjaan sehari-hari.
+
+                                        Tim BCM Indonesia juga menunjukkan pelayanan yang luar biasa—ramah, responsif, dan sangat kooperatif dalam setiap interaksi. Mereka menciptakan suasana kerja sama yang menyenangkan sekaligus produktif.
+
+                                        Terima kasih atas pengalaman yang sangat positif ini. Sukses terus untuk tim BCM Indonesia!”</p>
+                                    <p class="mb-3 hidden lg:block lg:font-normal text-gray-700 dark:text-gray-400 text-right">IT Ops</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -214,8 +249,10 @@
     </div>
     <!-- end testimoni -->
 
-    {{-- start our organization --}}
-    <div class="bg-white py-24 sm:py-32 rounded-lg">
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center p-4">Our Organization</h5>
+
+    {{-- start our organization internal --}}
+    <div class="bg-white py-24 sm:py-32 rounded-lg mb-6">
         <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
             <ul role="list" class="nostyle-ul grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
                 <li>
@@ -242,7 +279,7 @@
                     <div class="flex flex-col items-center gap-x-6">
                         <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/nana.png') }}" alt="">
                         <div>
-                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Nabila Pahlevi</h3>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Nabila</h3>
                             <p class="text-sm/6 font-semibold text-indigo-600 text-center">Junior Associate</p>
                         </div>
                     </div>
@@ -253,7 +290,7 @@
                         <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/nabiilah.png') }}" alt="">
                         <div>
                             <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Nabiilah Mufiidah</h3>
-                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Support Staff</p>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Operational Support</p>
                         </div>
                     </div>
                 </li>
@@ -270,7 +307,67 @@
             </ul>
         </div>
     </div>
-    {{-- end our organization --}}
+    {{-- end our organization internal --}}
+
+    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center p-4">Tenaga Ahli</h5>
+
+    {{-- start our organization tim ahli --}}
+    <div class="bg-white py-24 sm:py-32 rounded-lg">
+        <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+            <ul role="list" class="nostyle-ul grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+                <li>
+                    <div class="flex flex-col items-center gap-x-6">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/dummy.jpg') }}" alt="">
+                        <div>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Bambang Wahyudi</h3>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Tenaga Ahli</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex flex-col items-center gap-x-6">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/dummy.jpg') }}" alt="">
+                        <div>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Muhamad Dawaman, SE., M.KKK</h3>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Tenaga Ahli</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex flex-col items-center gap-x-6">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/dummy.jpg') }}" alt="">
+                        <div>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Tomy Perucho, S.E</h3>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Tenaga Ahli</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex flex-col items-center gap-x-6">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/dummy.jpg') }}" alt="">
+                        <div>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">M. Imam Mashudi S.Sos</h3>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Tenaga Ahli</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="flex flex-col items-center gap-x-6">
+                        <img class="size-48 rounded-full" src="{{ Storage::url('organization-photo/dummy.jpg') }}" alt="">
+                        <div>
+                            <h3 class="text-base/7 font-semibold tracking-tight text-gray-900 text-center">Elly Zulianto</h3>
+                            <p class="text-sm/6 font-semibold text-indigo-600 text-center">Tenaga Ahli</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {{-- end our organization tim ahli --}}
 
     </div>
 </x-layout>
