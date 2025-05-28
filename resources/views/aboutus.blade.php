@@ -57,17 +57,18 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
                 <div class="mx-auto mt-10 grid grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankraya.webp') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bpjstk.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-pelindo.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankbjb.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankjateng.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-banksulselbar.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-brksyariah.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-jamkrindo.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-bankkalteng.png') }}" alt="">
-                    <img class="h-full w-full" src="{{ Storage::url('client-logo/logo-jamsyar.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bankraya.webp') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bpjstk.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-pelindo.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bankbjb.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bankjateng.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-banksulselbar.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-brksyariah.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-jamkrindo.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bankkalsel.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-bankkalteng.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-jamsyar.png') }}" alt="">
+                    <img class="max-w-full h-auto" src="{{ Storage::url('client-logo/logo-ccbi.png') }}" alt="">
                 </div>
             </div>
         </div>
