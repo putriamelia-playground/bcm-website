@@ -87,11 +87,11 @@
                             <div class="mt-2">
                                 <input type="text" name="agenda_loc_link" id="agenda_loc_link" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                             </div>
-                            @error('agenda_loc_link')
+                            {{-- @error('agenda_loc_link')
                             <text for="" class="text-red-900">
                                 {{ $message }}
                             </text>
-                            @enderror
+                            @enderror --}}
                         </div>
 
                         <div class="col-span-12 sm:col-span-6">
